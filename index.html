@@ -3,17 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KasInvestGroup — Бронза, нержавейка, бабит, медь</title>
+    <title>KAS INVEST GROUP | Цветные металлы и специальные сплавы</title>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ПРЕМИУМ СТИЛИ — улучшенная версия 2.0 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+        :root {
+            --gold: #d4b68c;
+            --dark: #0a0a0a;
+            --charcoal: #141414;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #0a0a0a;
+            color: #e8e4d9;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            letter-spacing: -0.03em; 
+        }
+
+        /* HEADER — чистый и дорогой */
+        .header { 
+            background: rgba(10,10,10,0.97);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212,182,140,0.12);
+        }
+        .header .container { 
+            max-width: 1480px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 92px;
+        }
+        .logo {
+            font-size: 29px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            color: #e8e4d9;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--gold);
+        }
+        .header nav ul {
+            display: flex;
+            gap: 52px;
+            list-style: none;
+        }
+        .header nav a {
+            color: #e8e4d9;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15.5px;
+            transition: all 0.3s;
+        }
+        .header nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO — ещё более премиальный */
+        .hero {
+            height: 100vh;
+            min-height: 820px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 25% 75%, rgba(212,182,140,0.14) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1480px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+        .hero h1 {
+            font-size: clamp(58px, 7.5vw, 98px);
+            line-height: 1.05;
+            margin-bottom: 28px;
+            max-width: 860px;
+        }
+        .hero .subtitle {
+            font-size: 23px;
+            max-width: 680px;
+            opacity: 0.88;
+            margin-bottom: 52px;
+        }
+        .btn {
+            padding: 19px 46px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16.5px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: #e8d9c0;
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px rgba(212,182,140,0.35);
+        }
+        .btn-ghost {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+        .btn-ghost:hover {
+            background: var(--gold);
+            color: #0a0a0a;
+        }
+
+        /* СЕКЦИИ */
+        section { padding: 150px 0; }
+        .container { max-width: 1480px; margin: 0 auto; padding: 0 50px; }
+        .section-title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 90px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 92px;
+            height: 3px;
+            background: var(--gold);
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 130px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 36px;
+        }
+        .about-text p {
+            font-size: 20.5px;
+            opacity: 0.85;
+            max-width: 560px;
+        }
+        .stats {
+            display: flex;
+            flex-direction: column;
+            gap: 52px;
+        }
+        .stat {
+            border-left: 5px solid var(--gold);
+            padding-left: 32px;
+        }
+        .stat-num {
+            font-size: 56px;
+            font-weight: 600;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* КАТАЛОГ — чистые таблицы без столбца НДС */
+        .catalog { background: #111111; }
+        .catalog-note {
+            text-align: center;
+            font-size: 18.5px;
+            max-width: 820px;
+            margin: 0 auto 90px;
+            padding: 28px 50px;
+            background: rgba(212,182,140,0.07);
+            border: 1px solid rgba(212,182,140,0.18);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+        .catalog-group { margin-bottom: 120px; }
+        .group-title {
+            font-size: 34px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 36px;
+            color: #e8e4d9;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+        }
+        .price-table thead {
+            background: #222222;
+        }
+        .price-table th {
+            padding: 26px 32px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--gold);
+        }
+        .price-table td {
+            padding: 24px 32px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 16.2px;
+        }
+        .price-table tr:hover {
+            background: rgba(212,182,140,0.09);
+        }
+
+        /* КОНТАКТЫ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .contact p {
+            font-size: 19px;
+            margin-bottom: 18px;
+        }
+        .contact strong { color: var(--gold); }
+
+        /* FOOTER */
+        footer {
+            background: #080808;
+            padding: 90px 0 50px;
+            border-top: 1px solid rgba(212,182,140,0.12);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            max-width: 1480px;
+            margin: 0 auto;
+            padding: 0 50px;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+
+        /* АДАПТИВ */
+        @media (max-width: 1024px) {
+            .about-grid { grid-template-columns: 1fr; gap: 70px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+        }
+        @media (max-width: 768px) {
+            .header .container { padding: 0 25px; height: 80px; }
+            .header nav ul { gap: 28px; font-size: 14px; }
+            section { padding: 110px 0; }
+            .price-table th, .price-table td { padding: 18px 20px; font-size: 15px; }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <span class="logo">KasInvestGroup</span>
+            <div class="logo">KAS <span>INVEST</span> GROUP</div>
             <nav>
                 <ul>
-                    <li class="active"><a href="#home">Главная</a></li>
-                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О компании</a></li>
                     <li><a href="#catalog">Каталог</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
@@ -22,111 +302,220 @@
     </header>
 
     <main>
-        <!-- UNIQUE HERO с параллакс -->
+        <!-- HERO -->
         <section id="home" class="hero">
-            <div class="hero-bg"></div>
             <div class="hero-content">
-                <div class="container">
-                    <div class="hero-info">
-                        <h1>Металл<br><span>для вашего дела</span></h1>
-                        <p class="hero-subtitle">Бронза · Нержавейка · Бабит · Медь<br>Опт от 10 кг, резка под размер</p>
-                        <div class="hero-buttons">
-                            <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
-                            <a href="#contact" class="btn btn-ghost">Запросить цену</a>
-                        </div>
-                    </div>
+                <h1>Цветные металлы<br>и специальные сплавы</h1>
+                <p class="subtitle">ТОО «KAS INVEST GROUP» — прямые поставки меди, бронзы, латуни, нержавейки, баббита, титана, алюминия и ферросплавов по всему СНГ.</p>
+                <div>
+                    <a href="#catalog" class="btn btn-primary">Открыть полный каталог</a>
+                    <a href="#contact" class="btn btn-ghost">Получить актуальные цены</a>
                 </div>
             </div>
         </section>
 
-        <!-- О НАС (асимметричный) -->
-        <section id="about" class="about">
+        <!-- О КОМПАНИИ -->
+        <section id="about">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-text">
-                        <h2>Поставляем металл<br>который работает</h2>
-                        <p>15 лет на рынке. Подбираем сплавы под ваши нагрузки, термины и бюджет. Резка, доставка по РФ.</p>
+                        <h2>15 лет безупречной работы<br>на рынке Казахстана и России</h2>
+                        <p>Прямые поставки от производителей. Индивидуальный подбор сплавов, резка в размер, оперативная логистика. Работаем только с проверенными марками РФ, Китая и Индии.</p>
                     </div>
-                    <div class="about-stats">
+                    <div class="stats">
                         <div class="stat">
                             <span class="stat-num">500+</span>
-                            <span>позиций в наличии</span>
+                            <span>позиций в постоянном наличии</span>
                         </div>
                         <div class="stat">
                             <span class="stat-num">1000+</span>
-                            <span>клиентов</span>
+                            <span>постоянных корпоративных клиентов</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- УНИКАЛЬНЫЙ КАТАЛОГ (асимметрия + hover-искры) -->
+        <!-- КАТАЛОГ — таблицы БЕЗ столбца НДС -->
         <section id="catalog" class="catalog">
             <div class="container">
-                <h2 class="section-title">Каталог сплавов</h2>
-                <div class="items">
-                    <article class="item item-bronze">
-                        <div class="item-glow"></div>
-                        <h3>Бронза <span>БрАЖН11-3-2</span></h3>
-                        <p>Втулки, валы, шестерни. Высокая износостойкость.</p>
-                        <ul>
-                            <li>Ø 20-300 мм</li>
-                            <li>Длина до 3 м</li>
-                            <li>От 450 руб/кг</li>
-                        </ul>
-                    </article>
+                <h2 class="section-title">Полный каталог</h2>
+                
+                <div class="catalog-note">
+                    ✅ Все цены — <strong>договорные</strong>.<br>
+                    Уточняйте актуальное наличие и лучшую цену у директора компании.
+                </div>
 
-                    <article class="item item-stainless">
-                        <div class="item-glow"></div>
-                        <h3>Нержавейка <span>08Х18Н10</span></h3>
-                        <p>Лист, круг, труба. Пищевая и химия.</p>
-                        <ul>
-                            <li>Толщина 0.5-20 мм</li>
-                            <li>Ширина до 1500 мм</li>
-                            <li>От 320 руб/кг</li>
-                        </ul>
-                    </article>
+                <!-- Медь -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Медь и медные изделия</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Лист медный</td><td>М1</td><td>0,4–25 мм</td><td>РФ</td></tr>
+                            <tr><td>Плиты медные</td><td>М1</td><td>30–60 мм</td><td>РФ</td></tr>
+                            <tr><td>Аноды медные</td><td>М1</td><td>—</td><td>РФ</td></tr>
+                            <tr><td>Катоды медные</td><td>М1</td><td>катоды</td><td>РФ</td></tr>
+                            <tr><td>Пруток медный</td><td>М1, М2</td><td>Ø5–160 мм</td><td>РФ</td></tr>
+                            <tr><td>Труба медная</td><td>М2</td><td>—</td><td>РФ</td></tr>
+                            <tr><td>Шина медная</td><td>М1</td><td>разные</td><td>РФ</td></tr>
+                            <tr><td>Проволока медная</td><td>ММ, МТ</td><td>разные</td><td>РФ</td></tr>
+                            <tr><td>Медь фосфористая</td><td>МФ9, МФ10</td><td>плитка</td><td>РФ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <article class="item item-babbit">
-                        <div class="item-glow"></div>
-                        <h3>Бабит <span>Б83, Б88</span></h3>
-                        <p>Подшипники скольжения. Литейные слитки.</p>
-                        <ul>
-                            <li>Слитки 20 кг</li>
-                            <li>Чистота 99.9%</li>
-                            <li>От 1200 руб/кг</li>
-                        </ul>
-                    </article>
+                <!-- Бронза -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Бронза</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Чушка бронзовая</td><td>БрАЖ10-3, БрОЦ5-6-5</td><td>чушка</td><td>РФ</td></tr>
+                            <tr><td>Круг бронзовый</td><td>БрАЖ9-4</td><td>Ø16–250 мм</td><td>РФ</td></tr>
+                            <tr><td>Круг бронзовый</td><td>БрОЦС 5-5-5</td><td>Ø25–200 мм</td><td>РФ</td></tr>
+                            <tr><td>Втулка бронзовая</td><td>БрАЖ, БрОЦС</td><td>разные</td><td>РФ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <article class="item item-copper">
-                        <div class="item-glow"></div>
-                        <h3>Медь <span>М1, М00</span></h3>
-                        <p>Электротехника, теплообменники.</p>
-                        <ul>
-                            <li>Ø 8-120 мм</li>
-                            <li>Шина 10-100 мм</li>
-                            <li>От 950 руб/кг</li>
-                        </ul>
-                    </article>
+                <!-- Латунь -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Латунь</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Чушка латунная</td><td>ЛС</td><td>чушка</td><td>РФ</td></tr>
+                            <tr><td>Лист латунный</td><td>ЛС59-1, Л63</td><td>0,5–12 мм</td><td>РФ</td></tr>
+                            <tr><td>Плита латунная</td><td>ЛС59-1, Л63</td><td>30–70 мм</td><td>РФ</td></tr>
+                            <tr><td>Круг латунный</td><td>ЛС59-1, Л63</td><td>Ø6–160 мм</td><td>РФ</td></tr>
+                            <tr><td>Шестигранник латунный</td><td>ЛС59-1, Л63</td><td>Ø7–120 мм</td><td>РФ</td></tr>
+                            <tr><td>Проволока латунная</td><td>ЛС59-1, Л63</td><td>Ø0,2 мм и более</td><td>РФ</td></tr>
+                            <tr><td>Труба латунная</td><td>Л68, ЛО70-1</td><td>разное</td><td>РФ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Нержавейка -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Нержавеющая сталь</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Лист и ленты нержавеющие</td><td>AISI 304, 321, 316Ti, 316L, 310S, 430, 201</td><td>от 0,5 мм</td><td>РФ, Китай, Индия</td></tr>
+                            <tr><td>Трубы нержавеющие</td><td>AISI 304, 321, 316Ti, 316L, 310S, 430, 201</td><td>Ø6 мм и более</td><td>РФ, Китай, Индия</td></tr>
+                            <tr><td>Круги нержавеющие</td><td>AISI 321, 430, 310S, 316Ti, 20Х13 и др.</td><td>Ø5–300 мм</td><td>РФ, Китай, Индия</td></tr>
+                            <tr><td>Шестигранник нержавеющий</td><td>20Х13, AISI 304, 321, 316Ti, 431</td><td>Ø8 мм и более</td><td>РФ, Китай, Индия</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Никель, Титан и др. -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Никель • Титан • Нихром • Сурьма • Висмут</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Катоды и аноды никелевые</td><td>Н0, Н1, Н1У, НПА-1, НПАН</td><td>катоды / Ø4–10 мм</td><td>РФ</td></tr>
+                            <tr><td>Титан (лист, круг, проволока, плита)</td><td>ВТ1-0, ВТ5-1, ВТ6, ВТ20 и др.</td><td>разные</td><td>РФ</td></tr>
+                            <tr><td>Нихром</td><td>Х20Н80</td><td>разные</td><td>РФ</td></tr>
+                            <tr><td>Сурьма</td><td>Су0, Су1</td><td>чушка</td><td>РФ, Киргизия</td></tr>
+                            <tr><td>Висмут</td><td>ВИ1, ВИ2</td><td>чушка</td><td>РФ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Свинец, Олово, Баббит, Цинк, Алюминий -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Свинец • Олово • Припои • Баббит • Цинк • Алюминий</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Чушка и лист свинцовый</td><td>С1, С2</td><td>чушка / 1–15 мм</td><td>РФ</td></tr>
+                            <tr><td>Олово и припои ПОС</td><td>О1, ПОС30, ПОС40, ПОС61</td><td>чушка / пруток</td><td>РФ</td></tr>
+                            <tr><td>Баббит</td><td>Б16, Б83</td><td>чушка</td><td>РФ</td></tr>
+                            <tr><td>Чушка цинковая и ЦАМ</td><td>Ц0, Ц1, Ц2, ЦАМ4-1, ЦАМ9-1,5</td><td>чушка</td><td>РФ</td></tr>
+                            <tr><td>Чушка, лист и круг алюминиевый / дюраль</td><td>А7, АД1, АМг, Д16Т и др.</td><td>разные</td><td>РФ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Чугун и Ферросплавы -->
+                <div class="catalog-group">
+                    <h3 class="group-title">Чугун и Ферросплавы</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Марка</th>
+                                <th>Размеры</th>
+                                <th>Производитель</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Чугун литейный и передельный</td><td>Л2, Л3, ПЛ1, СЧ20</td><td>чушка</td><td>РФ</td></tr>
+                            <tr><td>Ферромарганец, ферросиликомарганец, ферротитан, ферромолибден и др.</td><td>ФМн78, МнС17, ФТи35, ФМ060</td><td>—</td><td>РФ, Китай, Россия</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
         <!-- КОНТАКТЫ -->
-        <section id="contact" class="contact">
+        <section id="contact">
             <div class="container">
-                <h2>Связаться с руководителем компании</h2>
+                <h2 class="section-title">Связаться с директором</h2>
                 <div class="contact-grid">
                     <div>
+                        <p><strong>Громоздин К.А.</strong></p>
                         <p><strong>Телефон:</strong> +7 (778) 153-48-48</p>
                         <p><strong>Email:</strong> too_kasinvestgroup@mail.ru</p>
                     </div>
                     <div>
-                        <p><strong>Время работы:</strong> Пн-Пт 9:00-18:00</p>
-                        <p><strong>Адрес:</strong> Республика Казахстан, Карагандинская область, г. Караганда, строение 45.
-
-</p>
+                        <p><strong>Адрес:</strong><br>Республика Казахстан, Карагандинская область,<br>г. Темиртау, ул. Карагандинская, строение 45</p>
+                        <p><strong>Время работы:</strong> Пн–Пт, 09:00–18:00</p>
                     </div>
                 </div>
             </div>
@@ -134,8 +523,10 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2026 KasInvestGroup. Металл для промышленности.</p>
+        <div class="container footer-content">
+            <div>© 2026 ТОО «KAS INVEST GROUP» • Все права защищены</div>
+            <div>БИН 260240024284 • ИИК KZ66856220315152948678 KZT</div>
+            <div>Металл, который работает</div>
         </div>
     </footer>
 </body>
