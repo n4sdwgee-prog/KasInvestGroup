@@ -180,7 +180,8 @@ img { max-width: 100%; }
     font-size: 48px; 
     font-weight: 700; 
     background: linear-gradient(45deg, #f59f0a, #cd853f); 
-    -webkit-background-clip: text; 
+    background-clip: text;  /* Только это */
+    -webkit-background-clip: text;  /* Оставьте для старых Safari */
     -webkit-text-fill-color: transparent; 
 }
 
