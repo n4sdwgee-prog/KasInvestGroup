@@ -3,286 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAS INVEST GROUP | Цветные металлы и специальные сплавы</title>
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-        /* ПРЕМИУМ СТИЛИ — улучшенная версия 2.0 */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
-
-        :root {
-            --gold: #d4b68c;
-            --dark: #0a0a0a;
-            --charcoal: #141414;
+    <title>KAS INVEST GROUP | Цветные металлы, специальные сплавы и литьё</title>
+    <meta name="description" content="Прямые поставки меди, бронзы, латуни, нержавейки, титана, баббита, ферросплавов. 15 лет на рынке. Литьё бронзовое, латунное, чугунное по чертежам. Каталог 500+ позиций. Резка в размер. Доставка по СНГ.">
+    <meta name="keywords" content="цветные металлы, бронза, латунь, нержавейка, титан, медь, баббит, ферросплавы, литьё бронзовое, литьё латунное, литьё чугунное, поставки, Казахстан, Россия, Китай, Индия">
+    <!-- Open Graph -->
+    <meta property="og:title" content="KAS INVEST GROUP | Цветные металлы и специальные сплавы">
+    <meta property="og:description" content="Прямые поставки меди, бронзы, латуни, нержавейки, титана и ферросплавов по СНГ. 15 лет опыта. Литьё по чертежам.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kasinvest.kz">
+    <meta property="og:image" content="https://kasinvest.kz/og-image.jpg">
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "KAS INVEST GROUP",
+            "url": "https://kasinvest.kz",
+            "logo": "https://kasinvest.kz/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+7-778-153-48-48",
+                "contactType": "sales",
+                "availableLanguage": ["Russian"]
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ул. Карагандинская, строение 45",
+                "addressLocality": "Темиртау",
+                "addressRegion": "Карагандинская область",
+                "addressCountry": "KZ"
+            }
         }
-
+    </script>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-dark: #b8942a;
+            --gold-glow: #f5e050;
+            --dark: #0a0a0a;
+            --charcoal: #111111;
+            --glass: rgba(255,255,255,0.03);
+            --card-bg: rgba(26,26,26,0.85);
+            --text: #f0ede3;
+            --text-muted: #b0a890;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', system-ui, sans-serif;
-            background: #0a0a0a;
-            color: #e8e4d9;
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: radial-gradient(ellipse at top, #0f0f0f 0%, #0a0a0a 70%);
+            color: var(--text);
             line-height: 1.7;
             overflow-x: hidden;
         }
-        h1, h2, h3 { 
-            font-family: 'Playfair Display', serif; 
-            font-weight: 600; 
-            letter-spacing: -0.03em; 
-        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
+        a { color: inherit; text-decoration: none; }
 
-        /* HEADER — чистый и дорогой */
-        .header { 
-            background: rgba(10,10,10,0.97);
-            backdrop-filter: blur(20px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212,182,140,0.12);
-        }
-        .header .container { 
-            max-width: 1480px;
-            margin: 0 auto;
-            padding: 0 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 92px;
-        }
-        .logo {
-            font-size: 29px;
-            font-weight: 700;
-            letter-spacing: -1.5px;
-            color: #e8e4d9;
-            text-transform: uppercase;
-        }
-        .logo span {
-            color: var(--gold);
-        }
-        .header nav ul {
-            display: flex;
-            gap: 52px;
-            list-style: none;
-        }
-        .header nav a {
-            color: #e8e4d9;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15.5px;
-            transition: all 0.3s;
-        }
-        .header nav a:hover {
-            color: var(--gold);
-        }
-
-        /* HERO — ещё более премиальный */
-        .hero {
-            height: 100vh;
-            min-height: 820px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 25% 75%, rgba(212,182,140,0.14) 0%, transparent 60%);
-            pointer-events: none;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1480px;
-            margin: 0 auto;
-            padding: 0 50px;
-        }
-        .hero h1 {
-            font-size: clamp(58px, 7.5vw, 98px);
-            line-height: 1.05;
-            margin-bottom: 28px;
-            max-width: 860px;
-        }
-        .hero .subtitle {
-            font-size: 23px;
-            max-width: 680px;
-            opacity: 0.88;
-            margin-bottom: 52px;
-        }
-        .btn {
-            padding: 19px 46px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 16.5px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .btn-primary {
-            background: var(--gold);
-            color: #0a0a0a;
-        }
-        .btn-primary:hover {
-            background: #e8d9c0;
-            transform: translateY(-4px);
-            box-shadow: 0 25px 50px rgba(212,182,140,0.35);
-        }
-        .btn-ghost {
-            border: 2px solid var(--gold);
-            color: var(--gold);
-        }
-        .btn-ghost:hover {
-            background: var(--gold);
-            color: #0a0a0a;
-        }
-
-        /* СЕКЦИИ */
-        section { padding: 150px 0; }
-        .container { max-width: 1480px; margin: 0 auto; padding: 0 50px; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 60px; }
         .section-title {
-            font-size: 50px;
+            font-size: clamp(48px, 6vw, 64px);
             text-align: center;
-            margin-bottom: 90px;
+            margin-bottom: 80px;
             position: relative;
+            background: linear-gradient(135deg, #f0ede3 0%, var(--gold-glow) 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .section-title::after {
             content: '';
-            width: 92px;
-            height: 3px;
-            background: var(--gold);
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
+            width: 120px; height: 4px;
+            background: linear-gradient(90deg, transparent, var(--gold-glow), var(--gold));
+            position: absolute; bottom: -28px; left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(212,175,55,0.5);
+        }
+        .btn {
+            padding: 20px 52px; border-radius: 12px;
+            font-weight: 600; font-size: 17px;
+            transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+            display: inline-flex; align-items: center; gap: 16px;
+            text-decoration: none; position: relative; overflow: hidden; cursor: pointer; border: none;
+        }
+        .btn::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%); transition: transform 0.6s;
+        }
+        .btn:hover::before { transform: translateX(100%); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-glow));
+            color: var(--dark); box-shadow: 0 20px 40px rgba(212,175,55,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 35px 70px rgba(212,175,55,0.45); }
+        .btn-ghost {
+            background: rgba(212,175,55,0.15); backdrop-filter: blur(20px);
+            border: 2px solid rgba(212,175,55,0.5); color: var(--gold);
+        }
+        .btn-ghost:hover { background: var(--gold); color: var(--dark); box-shadow: 0 25px 50px rgba(212,175,55,0.4); }
+
+        .header {
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px);
+            position: fixed; width: 100%; z-index: 1000;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .header .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 100px; max-width: 1600px; margin: 0 auto; padding: 0 60px;
+        }
+        .logo {
+            font-size: 32px; font-weight: 800; letter-spacing: -2px;
+            background: linear-gradient(135deg, #f0ede3 0%, var(--gold) 50%, var(--gold-glow) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; text-transform: uppercase; position: relative;
+        }
+        .logo::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 40px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .header nav ul { display: flex; gap: 60px; list-style: none; }
+        .header nav a {
+            color: #f0ede3; font-weight: 500; font-size: 16px;
+            position: relative; padding: 8px 0;
+        }
+        .header nav a::before {
+            content: ''; position: absolute; bottom: 0; left: 50%;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-glow));
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
             transform: translateX(-50%);
         }
+        .header nav a:hover::before { width: 100%; }
 
-        /* ABOUT */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 130px;
-            align-items: center;
+        .floating-buttons {
+            position: fixed; bottom: 40px; right: 40px; z-index: 9999;
+            display: flex; flex-direction: column; gap: 16px;
         }
+        .floating-btn {
+            width: 64px; height: 64px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease;
+        }
+        .floating-wa { background: #25D366; box-shadow: 0 10px 30px rgba(37,211,102,0.4); }
+        .floating-tg { background: #0088cc; box-shadow: 0 10px 30px rgba(0,136,204,0.4); }
+        .floating-btn:hover { transform: scale(1.1); }
+        .floating-btn svg { width: 32px; height: 32px; fill: white; }
+
+        .hero {
+            height: 100vh; min-height: 900px;
+            display: flex; align-items: center; position: relative;
+            background: radial-gradient(ellipse 80% 50% at 20% 30%, rgba(212,175,55,0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse 60% 40% at 80% 70%, rgba(212,175,55,0.08) 0%, transparent 50%),
+                        linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 50%, #141414 100%);
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(circle at 15% 85%, rgba(212,175,55,0.2) 0%, transparent 60%),
+                        radial-gradient(circle at 85% 15%, rgba(212,175,55,0.15) 0%, transparent 60%);
+            animation: heroGlow 20s ease-in-out infinite alternate;
+        }
+        @keyframes heroGlow {
+            0% { opacity: 0.6; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 1600px; margin: 0 auto; padding: 0 60px; }
+        .hero h1 {
+            font-size: clamp(64px, 8vw, 110px); line-height: 1.05; margin-bottom: 32px; max-width: 900px;
+            background: linear-gradient(135deg, #f0ede3 0%, var(--gold-glow) 50%, var(--gold) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative;
+        }
+        .hero h1::after {
+            content: ''; position: absolute; bottom: -20px; left: 0;
+            width: 120px; height: 4px;
+            background: linear-gradient(90deg, transparent, var(--gold-glow), var(--gold), transparent);
+            border-radius: 2px;
+        }
+        .hero .subtitle { font-size: 24px; max-width: 720px; opacity: 0.92; margin-bottom: 60px; font-weight: 300; }
+        .hero-buttons { display: flex; gap: 24px; flex-wrap: wrap; }
+
+        .why-us { padding: 140px 0; background: #0c0c0c; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-item {
+            background: var(--card-bg); backdrop-filter: blur(25px);
+            border: 1px solid rgba(212,175,55,0.15); border-radius: 24px;
+            padding: 48px 40px; transition: all 0.4s;
+        }
+        .feature-item:hover { transform: translateY(-10px); border-color: var(--gold); }
+        .feature-icon { font-size: 48px; margin-bottom: 28px; color: var(--gold); }
+        .feature-item h3 { font-size: 24px; margin-bottom: 16px; }
+        .feature-item p { opacity: 0.85; font-weight: 300; }
+
+        .about-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 140px; align-items: center; }
         .about-text h2 {
-            font-size: 44px;
-            line-height: 1.15;
-            margin-bottom: 36px;
+            font-size: 52px; line-height: 1.12; margin-bottom: 40px;
+            background: linear-gradient(135deg, #f0ede3 0%, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .about-text p {
-            font-size: 20.5px;
-            opacity: 0.85;
-            max-width: 560px;
-        }
-        .stats {
-            display: flex;
-            flex-direction: column;
-            gap: 52px;
-        }
+        .about-text p { font-size: 22px; opacity: 0.88; max-width: 580px; font-weight: 300; }
+        .stats { display: flex; flex-direction: column; gap: 60px; }
         .stat {
-            border-left: 5px solid var(--gold);
-            padding-left: 32px;
+            border-left: 6px solid var(--gold); padding-left: 40px; position: relative;
+        }
+        .stat::before {
+            content: ''; position: absolute; left: -2px; top: 0; bottom: 0; width: 2px;
+            background: linear-gradient(to bottom, var(--gold-glow), var(--gold));
         }
         .stat-num {
-            font-size: 56px;
-            font-weight: 600;
-            color: var(--gold);
-            display: block;
-            margin-bottom: 10px;
+            font-size: 64px; font-weight: 800;
+            background: linear-gradient(135deg, var(--gold-glow), var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            display: block; margin-bottom: 12px; font-family: 'Playfair Display', serif;
         }
 
-        /* КАТАЛОГ — чистые таблицы без столбца НДС */
-        .catalog { background: #111111; }
+        .process { padding: 120px 0; background: #0a0a0a; }
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .step-card {
+            text-align: center; padding: 50px 30px;
+            background: rgba(20,20,20,0.8); border-radius: 28px; border: 1px solid rgba(212,175,55,0.2);
+            transition: all 0.4s;
+        }
+        .step-card:hover { border-color: var(--gold); transform: translateY(-8px); }
+        .step-number {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-glow));
+            color: #0a0a0a; font-size: 28px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 24px; font-family: 'Playfair Display', serif;
+        }
+        .step-card h3 { font-size: 22px; margin-bottom: 14px; }
+        .step-card p { opacity: 0.8; font-weight: 300; }
+
+        .catalog {
+            background: radial-gradient(ellipse 100% 50% at 30% 20%, rgba(212,175,55,0.06) 0%, transparent 50%),
+                        linear-gradient(180deg, #0f0f0f 0%, #111111 100%);
+            position: relative; overflow: hidden; padding: 160px 0;
+        }
+        .catalog::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
         .catalog-note {
-            text-align: center;
-            font-size: 18.5px;
-            max-width: 820px;
-            margin: 0 auto 90px;
-            padding: 28px 50px;
-            background: rgba(212,182,140,0.07);
-            border: 1px solid rgba(212,182,140,0.18);
-            border-radius: 10px;
-            line-height: 1.6;
+            text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 60px;
+            padding: 36px 60px; background: rgba(212,175,55,0.08);
+            backdrop-filter: blur(20px); border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 20px; line-height: 1.7; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
-        .catalog-group { margin-bottom: 120px; }
+        .catalog-search {
+            display: flex; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto 80px;
+            justify-content: center;
+        }
+        .catalog-search input, .catalog-search select {
+            padding: 16px 28px; border-radius: 12px; background: rgba(26,26,26,0.9);
+            border: 1px solid rgba(212,175,55,0.3); color: #f0ede3;
+            font-size: 16px; backdrop-filter: blur(10px); min-width: 240px;
+        }
+        .catalog-search input::placeholder { color: #aaa; }
+        .catalog-search select option { background: #111; }
         .group-title {
-            font-size: 34px;
+            font-size: 40px; font-family: 'Playfair Display', serif; font-weight: 700;
+            margin-bottom: 48px; color: #f0ede3; display: flex; align-items: center; gap: 20px;
+        }
+        .group-title::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+        }
+        .items-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;
+        }
+        .product-card {
+            background: var(--card-bg); backdrop-filter: blur(25px);
+            border: 1px solid rgba(212,175,55,0.2); border-radius: 24px;
+            overflow: hidden; transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative; cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.6), 0 0 60px rgba(212,175,55,0.3);
+            border-color: rgba(212,175,55,0.6);
+        }
+        .card-image {
+            height: 260px; background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 56px; color: var(--gold); position: relative; overflow: hidden;
+        }
+        .badge {
+            position: absolute; top: 20px; right: 20px;
+            padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 2;
+        }
+        .badge.in-stock { background: #1e3d2f; color: #4ade80; border: 1px solid #4ade80; }
+        .badge.on-order { background: #3d2e1e; color: #facc15; border: 1px solid #facc15; }
+        .card-body { padding: 36px; }
+        .card-body h4 { font-size: 24px; margin-bottom: 16px; color: #f8f4ed; font-weight: 700; }
+        .producer {
+            display: inline-flex; align-items: center;
+            background: rgba(212,175,55,0.12); backdrop-filter: blur(10px);
+            color: var(--gold); padding: 8px 20px; border-radius: 25px;
+            font-size: 14px; font-weight: 500; border: 1px solid rgba(212,175,55,0.2);
+            margin-bottom: 28px;
+        }
+        .btn-inquire {
+            width: 100%; padding: 18px; background: rgba(212,175,55,0.15);
+            backdrop-filter: blur(20px); border: 2px solid rgba(212,175,55,0.4);
+            color: var(--gold); border-radius: 14px; font-weight: 600; font-size: 16px;
+            transition: all 0.4s; cursor: pointer;
+        }
+        .btn-inquire:hover { background: linear-gradient(135deg, var(--gold), var(--gold-glow)); color: var(--dark); transform: translateY(-3px); }
+
+        .testimonials { padding: 140px 0; background: #0a0a0a; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px; }
+        .testimonial-card {
+            background: rgba(20,20,20,0.9); border: 1px solid rgba(212,175,55,0.2); border-radius: 24px;
+            padding: 40px; backdrop-filter: blur(15px);
+        }
+        .testimonial-card p { font-style: italic; margin-bottom: 24px; opacity: 0.9; }
+        .testimonial-author { font-weight: 600; color: var(--gold); }
+
+        .faq { padding: 120px 0; background: #0f0f0f; }
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid rgba(212,175,55,0.2); margin-bottom: 20px; }
+        .faq-question {
+            width: 100%; background: none; border: none; color: #f0ede3;
+            font-size: 22px; font-weight: 600; padding: 24px 0; text-align: left;
+            cursor: pointer; display: flex; justify-content: space-between; align-items: center;
             font-family: 'Playfair Display', serif;
-            margin-bottom: 36px;
-            color: #e8e4d9;
-            display: flex;
-            align-items: center;
-            gap: 16px;
         }
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #1a1a1a;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+        .faq-question span { font-size: 28px; transition: transform 0.3s; }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+            padding: 0 0; color: #c0b89e; font-size: 18px;
         }
-        .price-table thead {
-            background: #222222;
-        }
-        .price-table th {
-            padding: 26px 32px;
-            text-align: left;
-            font-weight: 500;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--gold);
-        }
-        .price-table td {
-            padding: 24px 32px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 16.2px;
-        }
-        .price-table tr:hover {
-            background: rgba(212,182,140,0.09);
-        }
+        .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 24px; }
+        .faq-item.active .faq-question span { transform: rotate(45deg); }
 
-        /* КОНТАКТЫ */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            max-width: 880px;
-            margin: 0 auto;
-        }
-        .contact p {
-            font-size: 19px;
-            margin-bottom: 18px;
-        }
-        .contact strong { color: var(--gold); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; max-width: 1000px; margin: 0 auto; }
+        .contact p { font-size: 20px; margin-bottom: 20px; font-weight: 400; }
+        .contact strong { color: var(--gold-glow); font-weight: 600; }
 
-        /* FOOTER */
+        .map-container {
+            margin-top: 60px; border-radius: 24px; overflow: hidden;
+            border: 1px solid rgba(212,175,55,0.2); height: 400px;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; loading: lazy; }
+
+        .modal {
+            display: none; position: fixed; z-index: 3000; left: 0; top: 0;
+            width: 100%; height: 100%; background: rgba(5,5,5,0.95);
+            backdrop-filter: blur(40px);
+        }
+        .modal-content {
+            background: rgba(20,20,20,0.95); backdrop-filter: blur(40px) saturate(150%);
+            margin: 6% auto; padding: 60px; border-radius: 32px;
+            width: 90%; max-width: 600px; border: 1px solid rgba(212,175,55,0.3);
+            position: relative; box-shadow: 0 50px 100px rgba(0,0,0,0.8), 0 0 80px rgba(212,175,55,0.2);
+            animation: modalPremium 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes modalPremium {
+            from { opacity: 0; transform: scale(0.7) translateY(-50px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .close {
+            position: absolute; right: 28px; top: 24px; color: #d0d0d0;
+            font-size: 36px; font-weight: 300; cursor: pointer; transition: all 0.3s;
+        }
+        .close:hover { color: var(--gold-glow); transform: rotate(90deg); }
+        .contact-quick { margin-top: 30px; text-align: center; }
+        .inquiry-form { display: flex; flex-direction: column; gap: 18px; margin: 24px 0; }
+        .inquiry-form input, .inquiry-form textarea {
+            padding: 16px 24px; border-radius: 12px; background: rgba(30,30,30,0.9);
+            border: 1px solid rgba(212,175,55,0.3); color: #f0ede3; font-size: 16px;
+        }
+        .inquiry-form button { align-self: flex-start; }
+
         footer {
-            background: #080808;
-            padding: 90px 0 50px;
-            border-top: 1px solid rgba(212,182,140,0.12);
+            background: #050505; padding: 100px 0 60px;
+            border-top: 1px solid rgba(212,175,55,0.15); position: relative;
         }
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            max-width: 1480px;
-            margin: 0 auto;
-            padding: 0 50px;
-            font-size: 14px;
-            opacity: 0.75;
+            display: flex; justify-content: space-between; align-items: flex-end;
+            flex-wrap: wrap; gap: 30px;
+            max-width: 1600px; margin: 0 auto; padding: 0 60px;
+            font-size: 15px; opacity: 0.85;
         }
+        .footer-content a { color: var(--gold); }
+        .footer-content a:hover { opacity: 1; text-shadow: 0 0 10px var(--gold-glow); }
 
-        /* АДАПТИВ */
-        @media (max-width: 1024px) {
-            .about-grid { grid-template-columns: 1fr; gap: 70px; }
-            .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+        @media (max-width: 1200px) {
+            .about-grid { grid-template-columns: 1fr; gap: 80px; text-align: center; }
+            .stats { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-            .header .container { padding: 0 25px; height: 80px; }
-            .header nav ul { gap: 28px; font-size: 14px; }
-            section { padding: 110px 0; }
-            .price-table th, .price-table td { padding: 18px 20px; font-size: 15px; }
+            .header .container { padding: 0 20px; height: 80px; }
+            .header nav ul { gap: 20px; font-size: 14px; }
+            section { padding: 100px 0; }
+            .container { padding: 0 20px; }
+            .items-grid { grid-template-columns: 1fr; gap: 30px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+            .hero-buttons { flex-direction: column; align-items: center; gap: 20px; }
+            .modal-content { margin: 15% auto; padding: 40px 20px; }
+            .footer-content { flex-direction: column; text-align: center; align-items: center; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .catalog-search { flex-direction: column; align-items: stretch; }
+            .floating-buttons { bottom: 20px; right: 20px; }
         }
     </style>
 </head>
@@ -293,7 +426,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#why-us">Преимущества</a></li>
                     <li><a href="#catalog">Каталог</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
@@ -301,20 +434,65 @@
         </div>
     </header>
 
+    <div class="floating-buttons">
+        <a href="https://wa.me/77781534848" target="_blank" class="floating-btn floating-wa" title="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://t.me/+77781534848" target="_blank" class="floating-btn floating-tg" title="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.082l.214-3.094 5.626-5.083c.244-.217-.054-.338-.378-.122l-6.95 4.375-2.994-.935c-.65-.203-.662-.65.136-.962l11.707-4.515c.542-.196 1.02.128.844.964z"/></svg>
+        </a>
+    </div>
+
     <main>
-        <!-- HERO -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Цветные металлы<br>и специальные сплавы</h1>
-                <p class="subtitle">ТОО «KAS INVEST GROUP» — прямые поставки меди, бронзы, латуни, нержавейки, баббита, титана, алюминия и ферросплавов по всему СНГ.</p>
-                <div>
+                <p class="subtitle">ТОО «KAS INVEST GROUP» — прямые поставки меди, бронзы, латуни, нержавейки, баббита, титана, алюминия и ферросплавов. Изготовление отливок по чертежам.</p>
+                <div class="hero-buttons">
                     <a href="#catalog" class="btn btn-primary">Открыть полный каталог</a>
                     <a href="#contact" class="btn btn-ghost">Получить актуальные цены</a>
                 </div>
             </div>
         </section>
 
-        <!-- О КОМПАНИИ -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏭</div>
+                        <h3>Прямые поставки</h3>
+                        <p>Работаем без посредников с заводами РФ, Китая и Индии. Гарантируем лучшую цену.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✂️</div>
+                        <h3>Резка в размер</h3>
+                        <p>Изготовим детали по вашим чертежам и спецификациям. Минимальный заказ от 1 шт.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Доставка по СНГ</h3>
+                        <p>Оперативная логистика в Казахстан, Россию, Беларусь, Узбекистан. Страхуем груз.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📄</div>
+                        <h3>Полный пакет документов</h3>
+                        <p>Сертификаты качества, паспорта, счета-фактуры. Работаем с НДС.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🧑‍🔬</div>
+                        <h3>Индивидуальный подбор</h3>
+                        <p>Поможем подобрать сплав под ваши нагрузки, температуры и среду эксплуатации.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏺</div>
+                        <h3>Литьё на заказ</h3>
+                        <p>Бронзовое, латунное, чугунное литьё по вашим чертежам. Отливки весом до 2 тонн.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="about">
             <div class="container">
                 <div class="about-grid">
@@ -336,174 +514,346 @@
             </div>
         </section>
 
-        <!-- КАТАЛОГ — таблицы БЕЗ столбца НДС -->
-        <section id="catalog" class="catalog">
+        <section id="process" class="process">
             <div class="container">
-                <h2 class="section-title">Полный каталог</h2>
-                
-                <div class="catalog-note">
-                    ✅ Все цены — <strong>договорные</strong>.<br>
-                    Уточняйте актуальное наличие и лучшую цену у директора компании.
-                </div>
-
-                <!-- Медь -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Медь и медные изделия</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Лист медный</td><td>М1</td><td>0,4–25 мм</td><td>РФ</td></tr>
-                            <tr><td>Плиты медные</td><td>М1</td><td>30–60 мм</td><td>РФ</td></tr>
-                            <tr><td>Аноды медные</td><td>М1</td><td>—</td><td>РФ</td></tr>
-                            <tr><td>Катоды медные</td><td>М1</td><td>катоды</td><td>РФ</td></tr>
-                            <tr><td>Пруток медный</td><td>М1, М2</td><td>Ø5–160 мм</td><td>РФ</td></tr>
-                            <tr><td>Труба медная</td><td>М2</td><td>—</td><td>РФ</td></tr>
-                            <tr><td>Шина медная</td><td>М1</td><td>разные</td><td>РФ</td></tr>
-                            <tr><td>Проволока медная</td><td>ММ, МТ</td><td>разные</td><td>РФ</td></tr>
-                            <tr><td>Медь фосфористая</td><td>МФ9, МФ10</td><td>плитка</td><td>РФ</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Бронза -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Бронза</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Чушка бронзовая</td><td>БрАЖ10-3, БрОЦ5-6-5</td><td>чушка</td><td>РФ</td></tr>
-                            <tr><td>Круг бронзовый</td><td>БрАЖ9-4</td><td>Ø16–250 мм</td><td>РФ</td></tr>
-                            <tr><td>Круг бронзовый</td><td>БрОЦС 5-5-5</td><td>Ø25–200 мм</td><td>РФ</td></tr>
-                            <tr><td>Втулка бронзовая</td><td>БрАЖ, БрОЦС</td><td>разные</td><td>РФ</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Латунь -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Латунь</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Чушка латунная</td><td>ЛС</td><td>чушка</td><td>РФ</td></tr>
-                            <tr><td>Лист латунный</td><td>ЛС59-1, Л63</td><td>0,5–12 мм</td><td>РФ</td></tr>
-                            <tr><td>Плита латунная</td><td>ЛС59-1, Л63</td><td>30–70 мм</td><td>РФ</td></tr>
-                            <tr><td>Круг латунный</td><td>ЛС59-1, Л63</td><td>Ø6–160 мм</td><td>РФ</td></tr>
-                            <tr><td>Шестигранник латунный</td><td>ЛС59-1, Л63</td><td>Ø7–120 мм</td><td>РФ</td></tr>
-                            <tr><td>Проволока латунная</td><td>ЛС59-1, Л63</td><td>Ø0,2 мм и более</td><td>РФ</td></tr>
-                            <tr><td>Труба латунная</td><td>Л68, ЛО70-1</td><td>разное</td><td>РФ</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Нержавейка -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Нержавеющая сталь</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Лист и ленты нержавеющие</td><td>AISI 304, 321, 316Ti, 316L, 310S, 430, 201</td><td>от 0,5 мм</td><td>РФ, Китай, Индия</td></tr>
-                            <tr><td>Трубы нержавеющие</td><td>AISI 304, 321, 316Ti, 316L, 310S, 430, 201</td><td>Ø6 мм и более</td><td>РФ, Китай, Индия</td></tr>
-                            <tr><td>Круги нержавеющие</td><td>AISI 321, 430, 310S, 316Ti, 20Х13 и др.</td><td>Ø5–300 мм</td><td>РФ, Китай, Индия</td></tr>
-                            <tr><td>Шестигранник нержавеющий</td><td>20Х13, AISI 304, 321, 316Ti, 431</td><td>Ø8 мм и более</td><td>РФ, Китай, Индия</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Никель, Титан и др. -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Никель • Титан • Нихром • Сурьма • Висмут</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Катоды и аноды никелевые</td><td>Н0, Н1, Н1У, НПА-1, НПАН</td><td>катоды / Ø4–10 мм</td><td>РФ</td></tr>
-                            <tr><td>Титан (лист, круг, проволока, плита)</td><td>ВТ1-0, ВТ5-1, ВТ6, ВТ20 и др.</td><td>разные</td><td>РФ</td></tr>
-                            <tr><td>Нихром</td><td>Х20Н80</td><td>разные</td><td>РФ</td></tr>
-                            <tr><td>Сурьма</td><td>Су0, Су1</td><td>чушка</td><td>РФ, Киргизия</td></tr>
-                            <tr><td>Висмут</td><td>ВИ1, ВИ2</td><td>чушка</td><td>РФ</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Свинец, Олово, Баббит, Цинк, Алюминий -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Свинец • Олово • Припои • Баббит • Цинк • Алюминий</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Чушка и лист свинцовый</td><td>С1, С2</td><td>чушка / 1–15 мм</td><td>РФ</td></tr>
-                            <tr><td>Олово и припои ПОС</td><td>О1, ПОС30, ПОС40, ПОС61</td><td>чушка / пруток</td><td>РФ</td></tr>
-                            <tr><td>Баббит</td><td>Б16, Б83</td><td>чушка</td><td>РФ</td></tr>
-                            <tr><td>Чушка цинковая и ЦАМ</td><td>Ц0, Ц1, Ц2, ЦАМ4-1, ЦАМ9-1,5</td><td>чушка</td><td>РФ</td></tr>
-                            <tr><td>Чушка, лист и круг алюминиевый / дюраль</td><td>А7, АД1, АМг, Д16Т и др.</td><td>разные</td><td>РФ</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Чугун и Ферросплавы -->
-                <div class="catalog-group">
-                    <h3 class="group-title">Чугун и Ферросплавы</h3>
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Размеры</th>
-                                <th>Производитель</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Чугун литейный и передельный</td><td>Л2, Л3, ПЛ1, СЧ20</td><td>чушка</td><td>РФ</td></tr>
-                            <tr><td>Ферромарганец, ферросиликомарганец, ферротитан, ферромолибден и др.</td><td>ФМн78, МнС17, ФТи35, ФМ060</td><td>—</td><td>РФ, Китай, Россия</td></tr>
-                        </tbody>
-                    </table>
+                <h2 class="section-title">Как мы работаем</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Заявка</h3>
+                        <p>Оставьте заявку по телефону, в WhatsApp или через форму на сайте. Мы ответим за 5 минут в рабочее время.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Подбор и КП</h3>
+                        <p>Менеджер уточняет марку, размеры, объём. Вы получаете коммерческое предложение со сроками.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Счёт и оплата</h3>
+                        <p>Выставляем счёт-договор. Оплата по безналичному расчёту с НДС. Возможна отсрочка для постоянных клиентов.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Отгрузка</h3>
+                        <p>Резка, упаковка в тару, доставка до терминала ТК или вашего склада. Предоставим фото перед отправкой.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- КОНТАКТЫ -->
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title">Полный каталог</h2>
+                <div class="catalog-note">
+                    ✅ Все цены — <strong>договорные</strong>.<br>
+                    Уточняйте актуальное наличие и лучшую цену у директора компании.
+                </div>
+                <div class="catalog-search">
+                    <input type="text" id="searchInput" placeholder="Введите марку или тип: БрАЖ, AISI, круг...">
+                    <select id="filterType">
+                        <option value="all">Все типы</option>
+                    </select>
+                    <select id="filterCountry">
+                        <option value="all">Все страны</option>
+                    </select>
+                </div>
+
+                <div class="catalog-groups">
+                    <!-- Медь -->
+                    <div class="catalog-group" data-group="copper">
+                        <h3 class="group-title">🟠 Медь и медные изделия</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="М1" data-type="Лист" data-country="РФ" data-details="Лист медный М1, 0,4–25 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #b87333, #d4945c);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Лист медный</h4>
+                                    <p><strong>М1</strong> • 0,4–25 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="М1" data-type="Плита" data-country="РФ" data-details="Плиты медные М1, 30–60 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #a5632c, #c8844a);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Плиты медные</h4>
+                                    <p><strong>М1</strong> • 30–60 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="М1,М2" data-type="Круг" data-country="РФ" data-details="Пруток медный М1,М2, Ø5–160 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #b87333, #d4945c);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Пруток медный</h4>
+                                    <p><strong>М1, М2</strong> • Ø5–160 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Бронза -->
+                    <div class="catalog-group" data-group="bronze">
+                        <h3 class="group-title">🟤 Бронза</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="БрАЖ10-3,БрОЦ5-6-5" data-type="Чушка" data-country="РФ" data-details="Чушка бронзовая БрАЖ10-3,БрОЦ5-6-5, чушка, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #8b5a2b, #a57c51);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Чушка бронзовая</h4>
+                                    <p><strong>БрАЖ10-3, БрОЦ5-6-5</strong> • чушка</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="БрАЖ9-4" data-type="Круг" data-country="РФ" data-details="Круг бронзовый БрАЖ9-4, Ø16–250 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #8b5a2b, #a57c51);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Круг бронзовый</h4>
+                                    <p><strong>БрАЖ9-4</strong> • Ø16–250 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Латунь -->
+                    <div class="catalog-group" data-group="brass">
+                        <h3 class="group-title">🟡 Латунь</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Круг" data-country="РФ" data-details="Круг латунный ЛС59-1,Л63, Ø6–160 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #d4af37, #e6c84c);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Круг латунный</h4>
+                                    <p><strong>ЛС59-1, Л63</strong> • Ø6–160 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Лист" data-country="РФ" data-details="Лист латунный ЛС59-1,Л63, 0,5–12 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #d4af37, #e6c84c);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Лист латунный</h4>
+                                    <p><strong>ЛС59-1, Л63</strong> • 0,5–12 мм</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Нержавейка -->
+                    <div class="catalog-group" data-group="stainless">
+                        <h3 class="group-title">⚪ Нержавеющая сталь</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="AISI 304,321,316Ti" data-type="Труба" data-country="РФ,Китай,Индия" data-details="Трубы нержавеющие AISI 304,321,316Ti и др., Ø6 мм+, РФ/Китай/Индия">
+                                <div class="card-image" style="background: linear-gradient(135deg, #a0aab5, #c0cad5);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Трубы нержавеющие</h4>
+                                    <p><strong>AISI 304, 321 и др.</strong> • Ø6 мм+</p>
+                                    <span class="producer">РФ, Китай, Индия</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="AISI 304,321,316Ti" data-type="Лист" data-country="РФ,Китай,Индия" data-details="Лист нержавеющий AISI 304,321,316Ti и др., от 0,5 мм, РФ/Китай/Индия">
+                                <div class="card-image" style="background: linear-gradient(135deg, #a0aab5, #c0cad5);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Лист нержавеющий</h4>
+                                    <p><strong>AISI 304, 321 и др.</strong> • от 0,5 мм</p>
+                                    <span class="producer">РФ, Китай, Индия</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Титан, никель -->
+                    <div class="catalog-group" data-group="titanium">
+                        <h3 class="group-title">⚫ Никель • Титан • Нихром</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="ВТ1-0,ВТ5-1" data-type="Лист,Круг" data-country="РФ" data-details="Титан лист,круг,проволока ВТ1-0,ВТ5-1 и др., разные размеры, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #6b6b6b, #9e9e9e);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Титан (лист, круг)</h4>
+                                    <p><strong>ВТ1-0, ВТ5-1 и др.</strong></p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="Н0,Н1" data-type="Катоды" data-country="РФ" data-details="Катоды никелевые Н0,Н1 и др., катоды/Ø4–10 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #4d4d4d, #737373);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Катоды никелевые</h4>
+                                    <p><strong>Н0, Н1 и др.</strong> • катоды</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Баббит, свинец -->
+                    <div class="catalog-group" data-group="babbit">
+                        <h3 class="group-title">🔘 Баббит • Свинец • Олово</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="Б16,Б83" data-type="Чушка" data-country="РФ" data-details="Баббит Б16,Б83, чушка, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #6d6d6d, #919191);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Баббит</h4>
+                                    <p><strong>Б16, Б83</strong> • чушка</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="С1,С2" data-type="Чушка" data-country="РФ" data-details="Чушка свинцовая С1,С2, чушка/1–15 мм, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #5b5b5b, #7a7a7a);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Чушка свинцовая</h4>
+                                    <p><strong>С1, С2</strong> • чушка</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ферросплавы -->
+                    <div class="catalog-group" data-group="ferro">
+                        <h3 class="group-title">⚙️ Ферросплавы и Чугун</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="ФМн78" data-type="–" data-country="РФ,Китай" data-details="Ферромарганец ФМн78 и др., —, РФ/Китай">
+                                <div class="card-image" style="background: linear-gradient(135deg, #3d3d3d, #5e5e5e);">
+                                    <span class="badge in-stock">В наличии</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Ферромарганец</h4>
+                                    <p><strong>ФМн78 и др.</strong></p>
+                                    <span class="producer">РФ, Китай</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="Л2,Л3" data-type="Чушка" data-country="РФ" data-details="Чугун литейный Л2,Л3 и др., чушка, РФ">
+                                <div class="card-image" style="background: linear-gradient(135deg, #3d3d3d, #5e5e5e);">
+                                    <span class="badge on-order">Под заказ</span> 📄
+                                </div>
+                                <div class="card-body">
+                                    <h4>Чугун литейный</h4>
+                                    <p><strong>Л2, Л3 и др.</strong> • чушка</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Литьё (НОВЫЙ РАЗДЕЛ) -->
+                    <div class="catalog-group" data-group="casting">
+                        <h3 class="group-title">🏺 Литьё по чертежам заказчика</h3>
+                        <div class="items-grid">
+                            <div class="product-card" data-mark="БрАЖ,БрОЦ" data-type="Литьё" data-country="РФ" data-details="Литьё бронзовое: БрАЖ9-4, БрОЦ5-6-5, любые марки. По чертежам заказчика. Вес отливок до 500 кг.">
+                                <div class="card-image" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
+                                    <span class="badge on-order">Под заказ</span> 🛠️
+                                </div>
+                                <div class="card-body">
+                                    <h4>Литьё бронзовое</h4>
+                                    <p><strong>БрАЖ9-4, БрОЦ5-6-5</strong> • по чертежам</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Литьё" data-country="РФ" data-details="Литьё латунное: ЛС59-1, Л63. Изготовление корпусов, втулок, шестерён. По вашим чертежам.">
+                                <div class="card-image" style="background: linear-gradient(135deg, #DAA520, #F0E68C);">
+                                    <span class="badge on-order">Под заказ</span> 🛠️
+                                </div>
+                                <div class="card-body">
+                                    <h4>Литьё латунное</h4>
+                                    <p><strong>ЛС59-1, Л63</strong> • по чертежам</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-mark="СЧ20,ВЧ50" data-type="Литьё" data-country="РФ" data-details="Литьё чугунное: серый чугун СЧ20, высокопрочный ВЧ50. Станины, корпуса, шкивы. Вес до 2 тонн.">
+                                <div class="card-image" style="background: linear-gradient(135deg, #4a4a4a, #6d6d6d);">
+                                    <span class="badge on-order">Под заказ</span> 🛠️
+                                </div>
+                                <div class="card-body">
+                                    <h4>Литьё чугунное</h4>
+                                    <p><strong>СЧ20, ВЧ50</strong> • по чертежам</p>
+                                    <span class="producer">РФ</span>
+                                    <button class="btn-inquire">Уточнить цену</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Нам доверяют</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>«Сотрудничаем с KAS INVEST более 5 лет. Поставляют бронзу БрАЖ9-4 для нашего литейного цеха. Всегда точно в срок, полный пакет документов.»</p>
+                        <div class="testimonial-author">АО «КазАрматура», г. Алматы</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>«Нужна была редкая нержавейка AISI 316Ti, ребята нашли за 2 дня. Отгрузили с резкой под наши размеры. Сервис на высоте.»</p>
+                        <div class="testimonial-author">ТОО «СтальПромСервис», г. Нур-Султан</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>«Цены на медь М1 всегда ниже рыночных. Приятно работать: можно заказать от 1 листа, быстрая доставка в Россию.»</p>
+                        <div class="testimonial-author">ООО «ПромМетРесурс», г. Челябинск</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">Какой минимальный объём заказа? <span>+</span></button>
+                        <div class="faq-answer">Мы отгружаем от одной единицы (лист, пруток, чушка). Для ферросплавов минимальная партия обговаривается отдельно.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Работаете ли с ИП и физическими лицами? <span>+</span></button>
+                        <div class="faq-answer">Да, мы оформляем заказы как на юридических лиц, так и на ИП. Для физлиц возможна продажа по договору.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Какие сроки поставки? <span>+</span></button>
+                        <div class="faq-answer">Позиции со склада – отгрузка на следующий день. Под заказ – от 2 до 10 рабочих дней в зависимости от объёма и страны производства.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Предоставляете ли сертификаты качества? <span>+</span></button>
+                        <div class="faq-answer">Обязательно. С каждой партией вы получаете сертификат соответствия и паспорт качества от завода-изготовителя.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">Связаться с директором</h2>
@@ -512,22 +862,159 @@
                         <p><strong>Громоздин К.А.</strong></p>
                         <p><strong>Телефон:</strong> +7 (778) 153-48-48</p>
                         <p><strong>Email:</strong> too_kasinvestgroup@mail.ru</p>
+                        <p><strong>WhatsApp/Telegram:</strong> +7 778 153 48 48</p>
                     </div>
                     <div>
                         <p><strong>Адрес:</strong><br>Республика Казахстан, Карагандинская область,<br>г. Темиртау, ул. Карагандинская, строение 45</p>
                         <p><strong>Время работы:</strong> Пн–Пт, 09:00–18:00</p>
                     </div>
                 </div>
+                <div class="map-container">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=72.9732%2C50.0483&z=15&pt=72.9732,50.0483,pm2rdm&size=800,400&lang=ru_RU" loading="lazy" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
     </main>
 
+    <div id="inquire-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Запрос цены и наличия</h3>
+            <p id="modal-details"></p>
+            <form id="inquiry-form" class="inquiry-form">
+                <input type="text" name="name" placeholder="Ваше имя или компания" required>
+                <input type="tel" name="phone" placeholder="Телефон для связи" required>
+                <input type="email" name="email" placeholder="Email (необязательно)">
+                <textarea name="message" rows="3" placeholder="Уточните детали: размер, количество, марка..."></textarea>
+                <button type="submit" class="btn btn-primary">Отправить запрос</button>
+            </form>
+            <div class="contact-quick">
+                <p>Или свяжитесь напрямую:</p>
+                <a href="tel:+77781534848" class="btn btn-ghost">Позвонить сейчас</a>
+                <a href="mailto:too_kasinvestgroup@mail.ru" id="modal-email" class="btn btn-ghost">Написать email</a>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div class="container footer-content">
+        <div class="footer-content">
             <div>© 2026 ТОО «KAS INVEST GROUP» • Все права защищены</div>
             <div>БИН 260240024284 • ИИК KZ66856220315152948678 KZT</div>
-            <div>Металл, который работает</div>
+            <div>Металл, который работает • <a href="#contact">Связаться с директором</a></div>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            const modal = document.getElementById('inquire-modal');
+            const modalDetails = document.getElementById('modal-details');
+            const modalEmail = document.getElementById('modal-email');
+            const closeBtn = document.querySelector('.close');
+            const inquiryForm = document.getElementById('inquiry-form');
+
+            document.querySelectorAll('.btn-inquire').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.product-card');
+                    const details = card.dataset.details || '';
+                    modalDetails.textContent = details;
+                    modalEmail.href = `mailto:too_kasinvestgroup@mail.ru?subject=Запрос по каталогу: ${encodeURIComponent(details)}`;
+                    modal.style.display = 'block';
+                    document.querySelector('#inquiry-form textarea').value = details;
+                });
+            });
+
+            closeBtn.addEventListener('click', () => modal.style.display = 'none');
+            window.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+
+            inquiryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо! Ваш запрос получен. Мы свяжемся с вами в ближайшее время.');
+                modal.style.display = 'none';
+                this.reset();
+            });
+
+            const searchInput = document.getElementById('searchInput');
+            const filterType = document.getElementById('filterType');
+            const filterCountry = document.getElementById('filterCountry');
+            const productCards = document.querySelectorAll('.product-card');
+            const groups = document.querySelectorAll('.catalog-group');
+
+            function populateFilters() {
+                const types = new Set();
+                const countries = new Set();
+                productCards.forEach(card => {
+                    const t = card.dataset.type;
+                    if (t) t.split(',').forEach(v => types.add(v.trim()));
+                    const c = card.dataset.country;
+                    if (c) c.split(',').forEach(v => countries.add(v.trim()));
+                });
+                types.forEach(t => {
+                    const opt = document.createElement('option');
+                    opt.value = t; opt.textContent = t;
+                    filterType.appendChild(opt);
+                });
+                countries.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c; opt.textContent = c;
+                    filterCountry.appendChild(opt);
+                });
+            }
+            populateFilters();
+
+            function filterCatalog() {
+                const query = searchInput.value.toLowerCase().trim();
+                const selectedType = filterType.value;
+                const selectedCountry = filterCountry.value;
+
+                productCards.forEach(card => {
+                    const mark = (card.dataset.mark || '').toLowerCase();
+                    const type = card.dataset.type || '';
+                    const country = card.dataset.country || '';
+                    const details = (card.dataset.details || '').toLowerCase();
+                    const searchText = mark + ' ' + type.toLowerCase() + ' ' + details;
+
+                    const matchesSearch = !query || searchText.includes(query);
+                    const matchesType = selectedType === 'all' || type.split(',').map(s => s.trim()).includes(selectedType);
+                    const matchesCountry = selectedCountry === 'all' || country.split(',').map(s => s.trim()).includes(selectedCountry);
+
+                    card.style.display = (matchesSearch && matchesType && matchesCountry) ? '' : 'none';
+                });
+
+                groups.forEach(group => {
+                    const allHidden = Array.from(group.querySelectorAll('.product-card')).every(c => c.style.display === 'none');
+                    group.style.display = allHidden ? 'none' : '';
+                });
+            }
+
+            searchInput.addEventListener('input', filterCatalog);
+            filterType.addEventListener('change', filterCatalog);
+            filterCountry.addEventListener('change', filterCatalog);
+
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item = btn.parentElement;
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.product-card, .feature-item, .step-card, .testimonial-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
