@@ -1,429 +1,1149 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KAS INVEST GROUP | Цветные металлы, специальные сплавы и литьё</title>
-    <meta name="description" content="Прямые поставки меди, бронзы, латуни, нержавейки, титана, баббита, ферросплавов. 15 лет на рынке. Литьё бронзовое, латунное, чугунное по чертежам. Каталог 500+ позиций. Резка в размер. Доставка по СНГ.">
-    <meta name="keywords" content="цветные металлы, бронза, латунь, нержавейка, титан, медь, баббит, ферросплавы, литьё бронзовое, литьё латунное, литьё чугунное, поставки, Казахстан, Россия, Китай, Индия">
-    <!-- Open Graph -->
-    <meta property="og:title" content="KAS INVEST GROUP | Цветные металлы и специальные сплавы">
-    <meta property="og:description" content="Прямые поставки меди, бронзы, латуни, нержавейки, титана и ферросплавов по СНГ. 15 лет опыта. Литьё по чертежам.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kasinvest.kz">
-    <meta property="og:image" content="https://kasinvest.kz/og-image.jpg">
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <!-- Schema.org Organization -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "KAS INVEST GROUP",
-            "url": "https://kasinvest.kz",
-            "logo": "https://kasinvest.kz/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+7-778-153-48-48",
-                "contactType": "sales",
-                "availableLanguage": ["Russian"]
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "ул. Карагандинская, строение 45",
-                "addressLocality": "Темиртау",
-                "addressRegion": "Карагандинская область",
-                "addressCountry": "KZ"
-            }
-        }
-    </script>
+    <meta name="description" content="Прямые поставки меди, бронзы, латуни, нержавейки, титана, баббита, ферросплавов. 15 лет на рынке. Литьё бронзовое, латунное, чугунное по чертежам. Каталог 500+ позиций. Резка в размер. Доставка по СНГ." />
+    <meta property="og:title" content="KAS INVEST GROUP | Цветные металлы и сплавы" />
+    <meta property="og:description" content="Прямые поставки металлов. Литьё на заказ. Каталог 500+ позиций." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟡</text></svg>" />
     <style>
-        :root {
-            --gold: #d4af37;
-            --gold-dark: #b8942a;
-            --gold-glow: #f5e050;
-            --dark: #0a0a0a;
-            --charcoal: #111111;
-            --glass: rgba(255,255,255,0.03);
-            --card-bg: rgba(26,26,26,0.85);
-            --text: #f0ede3;
-            --text-muted: #b0a890;
+        /* ----- RESET & BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: radial-gradient(ellipse at top, #0f0f0f 0%, #0a0a0a 70%);
-            color: var(--text);
-            line-height: 1.7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #FBF9F6;
+            color: #1A1A1A;
+            line-height: 1.6;
+            font-weight: 400;
             overflow-x: hidden;
         }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
-        a { color: inherit; text-decoration: none; }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 60px;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
 
-        .container { max-width: 1600px; margin: 0 auto; padding: 0 60px; }
+        /* ----- TYPOGRAPHY ----- */
         .section-title {
-            font-size: clamp(48px, 6vw, 64px);
-            text-align: center;
-            margin-bottom: 80px;
-            position: relative;
-            background: linear-gradient(135deg, #f0ede3 0%, var(--gold-glow) 50%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            color: #1A1A1A;
+            margin-bottom: 0.4em;
+            line-height: 1.1;
         }
         .section-title::after {
             content: '';
-            width: 120px; height: 4px;
-            background: linear-gradient(90deg, transparent, var(--gold-glow), var(--gold));
-            position: absolute; bottom: -28px; left: 50%;
-            transform: translateX(-50%);
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #C9A96E;
+            margin-top: 0.3em;
             border-radius: 2px;
-            box-shadow: 0 2px 10px rgba(212,175,55,0.5);
         }
-        .btn {
-            padding: 20px 52px; border-radius: 12px;
-            font-weight: 600; font-size: 17px;
-            transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
-            display: inline-flex; align-items: center; gap: 16px;
-            text-decoration: none; position: relative; overflow: hidden; cursor: pointer; border: none;
+        .section-subtitle {
+            font-size: 1.35rem;
+            color: #5A5548;
+            max-width: 640px;
+            font-weight: 400;
+            margin-top: -0.4em;
+            margin-bottom: 3em;
+            line-height: 1.7;
         }
-        .btn::before {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: translateX(-100%); transition: transform 0.6s;
-        }
-        .btn:hover::before { transform: translateX(100%); }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--gold), var(--gold-glow));
-            color: var(--dark); box-shadow: 0 20px 40px rgba(212,175,55,0.3);
-        }
-        .btn-primary:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 35px 70px rgba(212,175,55,0.45); }
-        .btn-ghost {
-            background: rgba(212,175,55,0.15); backdrop-filter: blur(20px);
-            border: 2px solid rgba(212,175,55,0.5); color: var(--gold);
-        }
-        .btn-ghost:hover { background: var(--gold); color: var(--dark); box-shadow: 0 25px 50px rgba(212,175,55,0.4); }
 
+        /* ----- BUTTONS ----- */
+        .btn {
+            padding: 18px 42px;
+            border-radius: 100px;
+            font-weight: 550;
+            font-size: 15px;
+            letter-spacing: 0.03em;
+            transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+            background: transparent;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: #1A1A1A;
+            color: #fff;
+            border-color: #1A1A1A;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+        .btn-primary:hover {
+            background: #2E2E2E;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+        }
+        .btn-ghost {
+            background: transparent;
+            border: 2px solid #D6CFC4;
+            color: #1A1A1A;
+        }
+        .btn-ghost:hover {
+            border-color: #C9A96E;
+            background: rgba(201, 169, 110, 0.06);
+            color: #B08A4B;
+        }
+        .btn-gold {
+            background: transparent;
+            border: 2px solid #C9A96E;
+            color: #B08A4B;
+            font-weight: 600;
+        }
+        .btn-gold:hover {
+            background: #C9A96E;
+            color: #fff;
+            border-color: #C9A96E;
+        }
+        .btn-gold-filled {
+            background: #C9A96E;
+            color: #fff;
+            border-color: #C9A96E;
+        }
+        .btn-gold-filled:hover {
+            background: #B08A4B;
+            border-color: #B08A4B;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(201, 169, 110, 0.3);
+        }
+
+        /* ----- HEADER (обновлённый логотип) ----- */
         .header {
-            background: rgba(10,10,10,0.92);
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px);
-            position: fixed; width: 100%; z-index: 1000;
-            border-bottom: 1px solid rgba(212,175,55,0.2);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(251, 249, 246, 0.78);
+            backdrop-filter: blur(24px) saturate(1.2);
+            border-bottom: 1px solid rgba(214, 207, 196, 0.25);
+            transition: all 0.4s ease;
         }
         .header .container {
-            display: flex; align-items: center; justify-content: space-between;
-            height: 100px; max-width: 1600px; margin: 0 auto; padding: 0 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 96px;
         }
-        .logo {
-            font-size: 32px; font-weight: 800; letter-spacing: -2px;
-            background: linear-gradient(135deg, #f0ede3 0%, var(--gold) 50%, var(--gold-glow) 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; text-transform: uppercase; position: relative;
-        }
-        .logo::after {
-            content: ''; position: absolute; bottom: -4px; left: 0;
-            width: 40px; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        }
-        .header nav ul { display: flex; gap: 60px; list-style: none; }
-        .header nav a {
-            color: #f0ede3; font-weight: 500; font-size: 16px;
-            position: relative; padding: 8px 0;
-        }
-        .header nav a::before {
-            content: ''; position: absolute; bottom: 0; left: 50%;
-            width: 0; height: 2px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-glow));
-            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-            transform: translateX(-50%);
-        }
-        .header nav a:hover::before { width: 100%; }
 
+        /* ---- ЛОГОТИП: картинка + текст "KAS INVEST GROUP" одной строкой ---- */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0;                     /* полностью прижато, если надо отступ — поменять здесь */
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            user-select: none;
+            flex-shrink: 0;
+            margin-left: -70px;
+        }
+        .logo__img {
+            height: 190px;              /* ваша высота, меняйте как нужно */
+            width: auto;
+            display: block;
+            flex-shrink: 0;
+            margin-top: -10px; 
+            margin-right: -25px;
+        }
+        .logo__text {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #B08A4B;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(251, 249, 246, 0.8);
+        }
+
+        /* ---- Навигация ---- */
+        .header nav ul {
+            display: flex;
+            gap: 56px;
+            list-style: none;
+        }
+        .header nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #4A453C;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+        .header nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #C9A96E;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        .header nav a:hover {
+            color: #1A1A1A;
+        }
+        .header nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .burger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: #1A1A1A;
+            cursor: pointer;
+            padding: 8px;
+            line-height: 1;
+        }
+
+        /* ----- FLOATING BUTTONS ----- */
         .floating-buttons {
-            position: fixed; bottom: 40px; right: 40px; z-index: 9999;
-            display: flex; flex-direction: column; gap: 16px;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
         .floating-btn {
-            width: 64px; height: 64px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            transition: all 0.35s ease;
+            background: #fff;
+            border: none;
+            cursor: pointer;
         }
-        .floating-wa { background: #25D366; box-shadow: 0 10px 30px rgba(37,211,102,0.4); }
-        .floating-tg { background: #0088cc; box-shadow: 0 10px 30px rgba(0,136,204,0.4); }
-        .floating-btn:hover { transform: scale(1.1); }
-        .floating-btn svg { width: 32px; height: 32px; fill: white; }
+        .floating-wa { background: #25D366; }
+        .floating-tg { background: #0088cc; }
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 24px 56px rgba(0, 0, 0, 0.18);
+        }
+        .floating-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
 
+        /* ----- HERO, WHY US, ABOUT, PROCESS, CATALOG, etc. (без изменений) ----- */
         .hero {
-            height: 100vh; min-height: 900px;
-            display: flex; align-items: center; position: relative;
-            background: radial-gradient(ellipse 80% 50% at 20% 30%, rgba(212,175,55,0.12) 0%, transparent 50%),
-                        radial-gradient(ellipse 60% 40% at 80% 70%, rgba(212,175,55,0.08) 0%, transparent 50%),
-                        linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 50%, #141414 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #FBF9F6;
+            position: relative;
+            overflow: hidden;
         }
-        .hero::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(circle at 15% 85%, rgba(212,175,55,0.2) 0%, transparent 60%),
-                        radial-gradient(circle at 85% 15%, rgba(212,175,55,0.15) 0%, transparent 60%);
-            animation: heroGlow 20s ease-in-out infinite alternate;
+        .hero-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 180px 80px 120px;
+            position: relative;
+            z-index: 2;
         }
-        @keyframes heroGlow {
-            0% { opacity: 0.6; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.05); }
-        }
-        .hero-content { position: relative; z-index: 2; max-width: 1600px; margin: 0 auto; padding: 0 60px; }
         .hero h1 {
-            font-size: clamp(64px, 8vw, 110px); line-height: 1.05; margin-bottom: 32px; max-width: 900px;
-            background: linear-gradient(135deg, #f0ede3 0%, var(--gold-glow) 50%, var(--gold) 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative;
+            font-size: clamp(64px, 10vw, 120px);
+            line-height: 1.02;
+            margin-bottom: 0.3em;
+            max-width: 900px;
+            color: #1A1A1A;
+            font-weight: 500;
+            letter-spacing: -0.04em;
         }
-        .hero h1::after {
-            content: ''; position: absolute; bottom: -20px; left: 0;
-            width: 120px; height: 4px;
-            background: linear-gradient(90deg, transparent, var(--gold-glow), var(--gold), transparent);
-            border-radius: 2px;
+        .hero .subtitle {
+            font-size: 1.5rem;
+            max-width: 640px;
+            color: #5A5548;
+            margin-bottom: 2.8em;
+            font-weight: 400;
+            line-height: 1.7;
         }
-        .hero .subtitle { font-size: 24px; max-width: 720px; opacity: 0.92; margin-bottom: 60px; font-weight: 300; }
-        .hero-buttons { display: flex; gap: 24px; flex-wrap: wrap; }
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .hero-bg {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42%;
+            opacity: 0.04;
+            pointer-events: none;
+        }
 
-        .why-us { padding: 140px 0; background: #0c0c0c; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .why-us {
+            padding: 160px 0;
+            background: #FFFFFF;
+            border-top: 1px solid #EDE9E2;
+            border-bottom: 1px solid #EDE9E2;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px 60px;
+        }
         .feature-item {
-            background: var(--card-bg); backdrop-filter: blur(25px);
-            border: 1px solid rgba(212,175,55,0.15); border-radius: 24px;
-            padding: 48px 40px; transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .feature-item:hover { transform: translateY(-10px); border-color: var(--gold); }
-        .feature-icon { font-size: 48px; margin-bottom: 28px; color: var(--gold); }
-        .feature-item h3 { font-size: 24px; margin-bottom: 16px; }
-        .feature-item p { opacity: 0.85; font-weight: 300; }
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            color: #C9A96E;
+            stroke-width: 1.2;
+            opacity: 0.7;
+        }
+        .feature-item h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #1A1A1A;
+            letter-spacing: -0.02em;
+        }
+        .feature-item p {
+            color: #5A5548;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
 
-        .about-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 140px; align-items: center; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 100px;
+            align-items: center;
+            padding: 120px 0;
+        }
         .about-text h2 {
-            font-size: 52px; line-height: 1.12; margin-bottom: 40px;
-            background: linear-gradient(135deg, #f0ede3 0%, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: clamp(42px, 5vw, 64px);
+            font-weight: 500;
+            margin-bottom: 0.6em;
+            color: #1A1A1A;
         }
-        .about-text p { font-size: 22px; opacity: 0.88; max-width: 580px; font-weight: 300; }
-        .stats { display: flex; flex-direction: column; gap: 60px; }
+        .about-text p {
+            font-size: 1.25rem;
+            color: #5A5548;
+            max-width: 560px;
+            line-height: 1.8;
+        }
+        .stats {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
         .stat {
-            border-left: 6px solid var(--gold); padding-left: 40px; position: relative;
-        }
-        .stat::before {
-            content: ''; position: absolute; left: -2px; top: 0; bottom: 0; width: 2px;
-            background: linear-gradient(to bottom, var(--gold-glow), var(--gold));
+            padding-left: 32px;
+            border-left: 4px solid #C9A96E;
         }
         .stat-num {
-            font-size: 64px; font-weight: 800;
-            background: linear-gradient(135deg, var(--gold-glow), var(--gold));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            display: block; margin-bottom: 12px; font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 600;
+            color: #1A1A1A;
+            display: block;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.03em;
+        }
+        .stat span:last-child {
+            color: #7A7265;
+            font-size: 1.1rem;
+            margin-top: 0.5em;
+            display: block;
+            font-weight: 400;
         }
 
-        .process { padding: 120px 0; background: #0a0a0a; }
-        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .process {
+            padding: 160px 0;
+            background: #FBF9F6;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
         .step-card {
-            text-align: center; padding: 50px 30px;
-            background: rgba(20,20,20,0.8); border-radius: 28px; border: 1px solid rgba(212,175,55,0.2);
-            transition: all 0.4s;
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 56px 44px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s ease;
+            border: 1px solid #EDE9E2;
         }
-        .step-card:hover { border-color: var(--gold); transform: translateY(-8px); }
+        .step-card:hover {
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+            transform: translateY(-8px);
+            border-color: #C9A96E;
+        }
         .step-number {
-            width: 64px; height: 64px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--gold-glow));
-            color: #0a0a0a; font-size: 28px; font-weight: 800;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 24px; font-family: 'Playfair Display', serif;
-        }
-        .step-card h3 { font-size: 22px; margin-bottom: 14px; }
-        .step-card p { opacity: 0.8; font-weight: 300; }
-
-        .catalog {
-            background: radial-gradient(ellipse 100% 50% at 30% 20%, rgba(212,175,55,0.06) 0%, transparent 50%),
-                        linear-gradient(180deg, #0f0f0f 0%, #111111 100%);
-            position: relative; overflow: hidden; padding: 160px 0;
-        }
-        .catalog::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        }
-        .catalog-note {
-            text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 60px;
-            padding: 36px 60px; background: rgba(212,175,55,0.08);
-            backdrop-filter: blur(20px); border: 1px solid rgba(212,175,55,0.25);
-            border-radius: 20px; line-height: 1.7; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        }
-        .catalog-search {
-            display: flex; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto 80px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(201, 169, 110, 0.1);
+            color: #B08A4B;
+            font-size: 26px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
             justify-content: center;
-        }
-        .catalog-search input, .catalog-search select {
-            padding: 16px 28px; border-radius: 12px; background: rgba(26,26,26,0.9);
-            border: 1px solid rgba(212,175,55,0.3); color: #f0ede3;
-            font-size: 16px; backdrop-filter: blur(10px); min-width: 240px;
-        }
-        .catalog-search input::placeholder { color: #aaa; }
-        .catalog-search select option { background: #111; }
-        .group-title {
-            font-size: 40px; font-family: 'Playfair Display', serif; font-weight: 700;
-            margin-bottom: 48px; color: #f0ede3; display: flex; align-items: center; gap: 20px;
-        }
-        .group-title::after {
-            content: ''; flex: 1; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
-        }
-        .items-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;
-        }
-        .product-card {
-            background: var(--card-bg); backdrop-filter: blur(25px);
-            border: 1px solid rgba(212,175,55,0.2); border-radius: 24px;
-            overflow: hidden; transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative; cursor: pointer;
-        }
-        .product-card:hover {
-            transform: translateY(-20px) scale(1.02);
-            box-shadow: 0 50px 100px rgba(0,0,0,0.6), 0 0 60px rgba(212,175,55,0.3);
-            border-color: rgba(212,175,55,0.6);
-        }
-        .card-image {
-            height: 260px; background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 56px; color: var(--gold); position: relative; overflow: hidden;
-        }
-        .badge {
-            position: absolute; top: 20px; right: 20px;
-            padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; z-index: 2;
-        }
-        .badge.in-stock { background: #1e3d2f; color: #4ade80; border: 1px solid #4ade80; }
-        .badge.on-order { background: #3d2e1e; color: #facc15; border: 1px solid #facc15; }
-        .card-body { padding: 36px; }
-        .card-body h4 { font-size: 24px; margin-bottom: 16px; color: #f8f4ed; font-weight: 700; }
-        .producer {
-            display: inline-flex; align-items: center;
-            background: rgba(212,175,55,0.12); backdrop-filter: blur(10px);
-            color: var(--gold); padding: 8px 20px; border-radius: 25px;
-            font-size: 14px; font-weight: 500; border: 1px solid rgba(212,175,55,0.2);
-            margin-bottom: 28px;
-        }
-        .btn-inquire {
-            width: 100%; padding: 18px; background: rgba(212,175,55,0.15);
-            backdrop-filter: blur(20px); border: 2px solid rgba(212,175,55,0.4);
-            color: var(--gold); border-radius: 14px; font-weight: 600; font-size: 16px;
-            transition: all 0.4s; cursor: pointer;
-        }
-        .btn-inquire:hover { background: linear-gradient(135deg, var(--gold), var(--gold-glow)); color: var(--dark); transform: translateY(-3px); }
-
-        .testimonials { padding: 140px 0; background: #0a0a0a; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px; }
-        .testimonial-card {
-            background: rgba(20,20,20,0.9); border: 1px solid rgba(212,175,55,0.2); border-radius: 24px;
-            padding: 40px; backdrop-filter: blur(15px);
-        }
-        .testimonial-card p { font-style: italic; margin-bottom: 24px; opacity: 0.9; }
-        .testimonial-author { font-weight: 600; color: var(--gold); }
-
-        .faq { padding: 120px 0; background: #0f0f0f; }
-        .faq-grid { max-width: 900px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid rgba(212,175,55,0.2); margin-bottom: 20px; }
-        .faq-question {
-            width: 100%; background: none; border: none; color: #f0ede3;
-            font-size: 22px; font-weight: 600; padding: 24px 0; text-align: left;
-            cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 32px;
             font-family: 'Playfair Display', serif;
         }
-        .faq-question span { font-size: 28px; transition: transform 0.3s; }
+        .step-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .step-card p {
+            color: #5A5548;
+            line-height: 1.7;
+        }
+
+        .catalog {
+            padding: 160px 0;
+            background: #FFFFFF;
+        }
+        .catalog-note {
+            text-align: center;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: -20px auto 80px;
+            padding: 28px 48px;
+            background: #FBF9F6;
+            border: 1px solid #EDE9E2;
+            border-radius: 20px;
+            color: #5A5548;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        }
+        .catalog-search {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            justify-content: center;
+        }
+        .catalog-search select,
+        .catalog-search input {
+            padding: 16px 28px;
+            border-radius: 60px;
+            border: 2px solid #EDE9E2;
+            background: #fff;
+            font-size: 15px;
+            color: #1A1A1A;
+            min-width: 200px;
+            outline: none;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+            font-weight: 450;
+        }
+        .catalog-search select:focus,
+        .catalog-search input:focus {
+            border-color: #C9A96E;
+            box-shadow: 0 0 0 4px rgba(201, 169, 110, 0.08);
+        }
+        .group-title {
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin: 100px 0 56px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            letter-spacing: -0.02em;
+        }
+        .group-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: #EDE9E2;
+        }
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 44px;
+        }
+        .product-card {
+            background: #FBF9F6;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+            border: 1px solid #EDE9E2;
+            transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+            cursor: pointer;
+        }
+        .product-card:hover {
+            box-shadow: 0 32px 72px rgba(0, 0, 0, 0.06);
+            transform: translateY(-8px);
+            border-color: #C9A96E;
+        }
+        .card-image {
+            height: 260px;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .card-image img {
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+        }
+        .product-card:hover .card-image img {
+            transform: scale(1.03);
+        }
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .badge.in-stock {
+            background: #E8F0E8;
+            color: #2E7D32;
+        }
+        .card-body {
+            padding: 32px 36px 40px;
+        }
+        .card-body h4 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .card-body p {
+            color: #5A5548;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .producer {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(201, 169, 110, 0.08);
+            color: #B08A4B;
+            padding: 6px 22px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
+        }
+        .btn-inquire {
+            width: 100%;
+            padding: 16px;
+            background: transparent;
+            border: 2px solid #1A1A1A;
+            color: #1A1A1A;
+            border-radius: 60px;
+            font-weight: 550;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 12px;
+            letter-spacing: 0.03em;
+        }
+        .btn-inquire:hover {
+            background: #1A1A1A;
+            color: #fff;
+        }
+        .btn-gallery {
+            background: transparent;
+            border: 2px solid #EDE9E2;
+            color: #5A5548;
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .btn-gallery:hover {
+            border-color: #C9A96E;
+            color: #B08A4B;
+            background: rgba(201, 169, 110, 0.04);
+        }
+
+        /* ----- GALLERY MODAL ----- */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(24px);
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-modal.active {
+            display: flex;
+        }
+        .gallery-container {
+            background: #fff;
+            border-radius: 32px;
+            max-width: 92vw;
+            max-height: 92vh;
+            width: 1000px;
+            position: relative;
+            padding: 28px;
+            box-shadow: 0 60px 120px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-close {
+            position: absolute;
+            right: 24px;
+            top: 20px;
+            font-size: 36px;
+            cursor: pointer;
+            color: #5A5548;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .gallery-close:hover {
+            transform: rotate(90deg);
+        }
+        .gallery-main {
+            background: #FBF9F6;
+            border-radius: 24px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery-main img {
+            max-height: 70vh;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .gallery-thumbs {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            padding: 24px 8px 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery-thumbs img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 16px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: 0.2s ease;
+        }
+        .gallery-thumbs img.active-thumb {
+            border-color: #C9A96E;
+        }
+        .gallery-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            gap: 16px;
+        }
+        .gallery-nav button {
+            background: #FBF9F6;
+            border: 2px solid #EDE9E2;
+            padding: 12px 32px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .gallery-nav button:hover {
+            border-color: #C9A96E;
+            color: #B08A4B;
+        }
+
+        /* ----- TESTIMONIALS, FAQ, CONTACT (без изменений) ----- */
+        .testimonials {
+            padding: 160px 0;
+            background: #FBF9F6;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+        .testimonial-card {
+            background: #FFFFFF;
+            border: 1px solid #EDE9E2;
+            border-radius: 28px;
+            padding: 48px 44px;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            border-color: #C9A96E;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #5A5548;
+            margin-bottom: 28px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: #B08A4B;
+            letter-spacing: 0.02em;
+        }
+
+        .faq {
+            padding: 160px 0;
+            background: #FFFFFF;
+        }
+        .faq-grid {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 2px solid #EDE9E2;
+            margin-bottom: 16px;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #1A1A1A;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 32px 0;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover {
+            color: #B08A4B;
+        }
+        .faq-question span {
+            font-size: 2rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
         .faq-answer {
-            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
-            padding: 0 0; color: #c0b89e; font-size: 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+            color: #5A5548;
+            padding: 0 0 0 0;
+            line-height: 1.8;
         }
-        .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 24px; }
-        .faq-item.active .faq-question span { transform: rotate(45deg); }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 32px;
+        }
 
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; max-width: 1000px; margin: 0 auto; }
-        .contact p { font-size: 20px; margin-bottom: 20px; font-weight: 400; }
-        .contact strong { color: var(--gold-glow); font-weight: 600; }
-
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            padding: 100px 0;
+        }
+        .contact-info p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #4A453C;
+        }
+        .contact-info strong {
+            color: #1A1A1A;
+            font-weight: 600;
+        }
+        .contact-form-container {
+            background: #FBF9F6;
+            border: 1px solid #EDE9E2;
+            border-radius: 32px;
+            padding: 52px;
+        }
+        .contact-form-container h3 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+        .inquiry-form input,
+        .inquiry-form textarea {
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 16px;
+            border: 2px solid #EDE9E2;
+            margin-bottom: 20px;
+            font-size: 15px;
+            background: #fff;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .inquiry-form input:focus,
+        .inquiry-form textarea:focus {
+            border-color: #C9A96E;
+            box-shadow: 0 0 0 4px rgba(201, 169, 110, 0.06);
+            outline: none;
+        }
         .map-container {
-            margin-top: 60px; border-radius: 24px; overflow: hidden;
-            border: 1px solid rgba(212,175,55,0.2); height: 400px;
+            margin-top: 60px;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid #EDE9E2;
+            height: 420px;
         }
-        .map-container iframe { width: 100%; height: 100%; border: 0; loading: lazy; }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-        .modal {
-            display: none; position: fixed; z-index: 3000; left: 0; top: 0;
-            width: 100%; height: 100%; background: rgba(5,5,5,0.95);
-            backdrop-filter: blur(40px);
+        .direct-contact {
+            margin-top: 80px;
+            padding: 60px 40px;
+            background: #FBF9F6;
+            border-radius: 32px;
+            border: 1px solid #EDE9E2;
+            text-align: center;
         }
-        .modal-content {
-            background: rgba(20,20,20,0.95); backdrop-filter: blur(40px) saturate(150%);
-            margin: 6% auto; padding: 60px; border-radius: 32px;
-            width: 90%; max-width: 600px; border: 1px solid rgba(212,175,55,0.3);
-            position: relative; box-shadow: 0 50px 100px rgba(0,0,0,0.8), 0 0 80px rgba(212,175,55,0.2);
-            animation: modalPremium 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        .direct-contact__inner h3 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-bottom: 32px;
         }
-        @keyframes modalPremium {
-            from { opacity: 0; transform: scale(0.7) translateY(-50px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+        .direct-contact__buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .close {
-            position: absolute; right: 28px; top: 24px; color: #d0d0d0;
-            font-size: 36px; font-weight: 300; cursor: pointer; transition: all 0.3s;
+        .direct-contact__buttons .btn {
+            min-width: 220px;
+            padding: 18px 36px;
+            font-size: 16px;
+            gap: 12px;
         }
-        .close:hover { color: var(--gold-glow); transform: rotate(90deg); }
-        .contact-quick { margin-top: 30px; text-align: center; }
-        .inquiry-form { display: flex; flex-direction: column; gap: 18px; margin: 24px 0; }
-        .inquiry-form input, .inquiry-form textarea {
-            padding: 16px 24px; border-radius: 12px; background: rgba(30,30,30,0.9);
-            border: 1px solid rgba(212,175,55,0.3); color: #f0ede3; font-size: 16px;
-        }
-        .inquiry-form button { align-self: flex-start; }
-
-        footer {
-            background: #050505; padding: 100px 0 60px;
-            border-top: 1px solid rgba(212,175,55,0.15); position: relative;
-        }
-        .footer-content {
-            display: flex; justify-content: space-between; align-items: flex-end;
-            flex-wrap: wrap; gap: 30px;
-            max-width: 1600px; margin: 0 auto; padding: 0 60px;
-            font-size: 15px; opacity: 0.85;
-        }
-        .footer-content a { color: var(--gold); }
-        .footer-content a:hover { opacity: 1; text-shadow: 0 0 10px var(--gold-glow); }
-
-        @media (max-width: 1200px) {
-            .about-grid { grid-template-columns: 1fr; gap: 80px; text-align: center; }
-            .stats { flex-direction: row; justify-content: center; flex-wrap: wrap; }
-            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+        .direct-contact__hint {
+            margin-top: 28px;
+            color: #7A7265;
+            font-size: 0.95rem;
         }
         @media (max-width: 768px) {
-            .header .container { padding: 0 20px; height: 80px; }
-            .header nav ul { gap: 20px; font-size: 14px; }
-            section { padding: 100px 0; }
-            .container { padding: 0 20px; }
-            .items-grid { grid-template-columns: 1fr; gap: 30px; }
-            .contact-grid { grid-template-columns: 1fr; gap: 60px; }
-            .hero-buttons { flex-direction: column; align-items: center; gap: 20px; }
-            .modal-content { margin: 15% auto; padding: 40px 20px; }
-            .footer-content { flex-direction: column; text-align: center; align-items: center; }
-            .steps-grid { grid-template-columns: 1fr; }
-            .catalog-search { flex-direction: column; align-items: stretch; }
-            .floating-buttons { bottom: 20px; right: 20px; }
+            .direct-contact {
+                padding: 40px 24px;
+            }
+            .direct-contact__buttons .btn {
+                min-width: 100%;
+            }
+        }
+
+        footer {
+            background: #FFFFFF;
+            padding: 64px 0;
+            border-top: 1px solid #EDE9E2;
+            font-size: 14px;
+            color: #7A7265;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-content a {
+            color: #B08A4B;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .footer-content a:hover {
+            color: #1A1A1A;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(16px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            background: #fff;
+            margin: 8% auto;
+            padding: 48px 52px 40px;
+            border-radius: 32px;
+            width: 90%;
+            max-width: 540px;
+            position: relative;
+            box-shadow: 0 60px 120px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            position: absolute;
+            right: 24px;
+            top: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #5A5548;
+            transition: transform 0.3s ease;
+        }
+        .close:hover {
+            transform: rotate(90deg);
+        }
+        #modal-details {
+            background: #FBF9F6;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            border-left: 4px solid #C9A96E;
+            color: #4A453C;
+            font-weight: 500;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .hero-content {
+                padding: 160px 60px 80px;
+            }
+        }
+        @media (max-width: 768px) {
+            .header .container {
+                height: 76px;
+            }
+
+            /* ---- Адаптивный логотип ---- */
+            .logo__img {
+                height: 70px;           /* уменьшаем картинку на планшетах */
+            }
+            .logo__text {
+                font-size: 1.6rem;
+            }
+
+            .header nav {
+                display: none;
+            }
+            .header nav.active {
+                display: flex;
+                position: fixed;
+                top: 76px;
+                left: 0;
+                background: #fff;
+                width: 100%;
+                flex-direction: column;
+                padding: 32px 24px;
+                box-shadow: 0 20px 48px rgba(0, 0, 0, 0.04);
+                border-bottom: 1px solid #EDE9E2;
+            }
+            .header nav ul {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .burger {
+                display: block;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 3.4rem;
+            }
+            .hero-content {
+                padding: 140px 24px 60px;
+            }
+            .container {
+                padding: 0 24px;
+            }
+            .section-title {
+                font-size: 2.6rem;
+            }
+            .contact-form-container {
+                padding: 32px;
+            }
+            .modal-content {
+                padding: 32px 24px;
+            }
+            .gallery-container {
+                padding: 16px;
+            }
+            .floating-buttons {
+                bottom: 24px;
+                right: 24px;
+            }
+            .floating-btn {
+                width: 56px;
+                height: 56px;
+            }
+            .stat-num {
+                font-size: 3.2rem;
+            }
+            .gallery-thumbs img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo__img {
+                height: 50px;
+            }
+            .logo__text {
+                font-size: 1.2rem;
+            }
+            .header .container {
+                height: 68px;
+            }
+            .header nav.active {
+                top: 68px;
+            }
+        }
+
+        /* ----- REVEAL ----- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.05s; }
+        .reveal-delay-2 { transition-delay: 0.1s; }
+        .reveal-delay-3 { transition-delay: 0.15s; }
+        .reveal-delay-4 { transition-delay: 0.2s; }
+        .btn, .product-card, .step-card, .testimonial-card, .feature-item {
+            will-change: transform;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">KAS <span>INVEST</span> GROUP</div>
-            <nav>
+            <!-- Логотип: картинка слева + текст "KAS INVEST GROUP" одной строкой -->
+            <a href="#home" class="logo" aria-label="KAS INVEST GROUP — главная">
+                <img src="logo.png" alt="KAS INVEST GROUP" class="logo__img" />
+                <span class="logo__text">KAS INVEST GROUP</span>
+            </a>
+
+            <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#why-us">Преимущества</a></li>
@@ -434,6 +1154,7 @@
         </div>
     </header>
 
+    <!-- Остальной контент (без изменений) -->
     <div class="floating-buttons">
         <a href="https://wa.me/77781534848" target="_blank" class="floating-btn floating-wa" title="WhatsApp">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -449,43 +1170,46 @@
                 <h1>Цветные металлы<br>и специальные сплавы</h1>
                 <p class="subtitle">ТОО «KAS INVEST GROUP» — прямые поставки меди, бронзы, латуни, нержавейки, баббита, титана, алюминия и ферросплавов. Изготовление отливок по чертежам.</p>
                 <div class="hero-buttons">
-                    <a href="#catalog" class="btn btn-primary">Открыть полный каталог</a>
+                    <a href="#catalog" class="btn btn-primary">Открыть каталог</a>
                     <a href="#contact" class="btn btn-ghost">Получить актуальные цены</a>
                 </div>
+            </div>
+            <div class="hero-bg">
+                <svg viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="180" stroke="#C9A96E" stroke-width="0.6"/></svg>
             </div>
         </section>
 
         <section id="why-us" class="why-us">
             <div class="container">
-                <h2 class="section-title">Почему выбирают нас</h2>
+                <h2 class="section-title reveal">Почему выбирают нас</h2>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">🏭</div>
+                    <div class="feature-item reveal reveal-delay-1">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                         <h3>Прямые поставки</h3>
                         <p>Работаем без посредников с заводами РФ, Китая и Индии. Гарантируем лучшую цену.</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✂️</div>
+                    <div class="feature-item reveal reveal-delay-2">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg>
                         <h3>Резка в размер</h3>
                         <p>Изготовим детали по вашим чертежам и спецификациям. Минимальный заказ от 1 шт.</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🚚</div>
+                    <div class="feature-item reveal reveal-delay-3">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
                         <h3>Доставка по СНГ</h3>
                         <p>Оперативная логистика в Казахстан, Россию, Беларусь, Узбекистан. Страхуем груз.</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📄</div>
+                    <div class="feature-item reveal reveal-delay-4">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         <h3>Полный пакет документов</h3>
                         <p>Сертификаты качества, паспорта, счета-фактуры. Работаем с НДС.</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🧑‍🔬</div>
+                    <div class="feature-item reveal reveal-delay-1">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                         <h3>Индивидуальный подбор</h3>
                         <p>Поможем подобрать сплав под ваши нагрузки, температуры и среду эксплуатации.</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🏺</div>
+                    <div class="feature-item reveal reveal-delay-2">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7"/></svg>
                         <h3>Литьё на заказ</h3>
                         <p>Бронзовое, латунное, чугунное литьё по вашим чертежам. Отливки весом до 2 тонн.</p>
                     </div>
@@ -496,19 +1220,13 @@
         <section id="about">
             <div class="container">
                 <div class="about-grid">
-                    <div class="about-text">
+                    <div class="about-text reveal">
                         <h2>15 лет безупречной работы<br>на рынке Казахстана и России</h2>
                         <p>Прямые поставки от производителей. Индивидуальный подбор сплавов, резка в размер, оперативная логистика. Работаем только с проверенными марками РФ, Китая и Индии.</p>
                     </div>
                     <div class="stats">
-                        <div class="stat">
-                            <span class="stat-num">500+</span>
-                            <span>позиций в постоянном наличии</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">1000+</span>
-                            <span>постоянных корпоративных клиентов</span>
-                        </div>
+                        <div class="stat reveal reveal-delay-1"><span class="stat-num">500+</span><span>позиций в постоянном наличии</span></div>
+                        <div class="stat reveal reveal-delay-2"><span class="stat-num">1000+</span><span>постоянных корпоративных клиентов</span></div>
                     </div>
                 </div>
             </div>
@@ -516,293 +1234,148 @@
 
         <section id="process" class="process">
             <div class="container">
-                <h2 class="section-title">Как мы работаем</h2>
+                <h2 class="section-title reveal">Как мы работаем</h2>
                 <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Заявка</h3>
-                        <p>Оставьте заявку по телефону, в WhatsApp или через форму на сайте. Мы ответим за 5 минут в рабочее время.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Подбор и КП</h3>
-                        <p>Менеджер уточняет марку, размеры, объём. Вы получаете коммерческое предложение со сроками.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Счёт и оплата</h3>
-                        <p>Выставляем счёт-договор. Оплата по безналичному расчёту с НДС. Возможна отсрочка для постоянных клиентов.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h3>Отгрузка</h3>
-                        <p>Резка, упаковка в тару, доставка до терминала ТК или вашего склада. Предоставим фото перед отправкой.</p>
-                    </div>
+                    <div class="step-card reveal reveal-delay-1"><div class="step-number">1</div><h3>Заявка</h3><p>Оставьте заявку по телефону, в WhatsApp или через форму на сайте. Мы ответим за 5 минут в рабочее время.</p></div>
+                    <div class="step-card reveal reveal-delay-2"><div class="step-number">2</div><h3>Подбор и КП</h3><p>Менеджер уточняет марку, размеры, объём. Вы получаете коммерческое предложение со сроками.</p></div>
+                    <div class="step-card reveal reveal-delay-3"><div class="step-number">3</div><h3>Счёт и оплата</h3><p>Выставляем счёт-договор. Оплата по безналичному расчёту с НДС. Возможна отсрочка для постоянных клиентов.</p></div>
+                    <div class="step-card reveal reveal-delay-4"><div class="step-number">4</div><h3>Отгрузка</h3><p>Резка, упаковка в тару, доставка до терминала ТК или вашего склада. Предоставим фото перед отправкой.</p></div>
                 </div>
             </div>
         </section>
 
         <section id="catalog" class="catalog">
             <div class="container">
-                <h2 class="section-title">Полный каталог</h2>
-                <div class="catalog-note">
-                    ✅ Все цены — <strong>договорные</strong>.<br>
-                    Уточняйте актуальное наличие и лучшую цену у директора компании.
+                <h2 class="section-title reveal">Полный каталог</h2>
+                <div class="catalog-note reveal">
+                    Все цены указаны по запросу. Актуальную стоимость и условия поставки уточняйте 
+                    по телефону или через форму заявки. Полная галерея изображений открывается по 
+                    кнопке «Смотреть все фото» на каждой карточке товара.
                 </div>
-                <div class="catalog-search">
-                    <input type="text" id="searchInput" placeholder="Введите марку или тип: БрАЖ, AISI, круг...">
-                    <select id="filterType">
-                        <option value="all">Все типы</option>
-                    </select>
-                    <select id="filterCountry">
-                        <option value="all">Все страны</option>
-                    </select>
+                <div class="catalog-search reveal">
+                    <select id="filterMark"><option value="all">Все марки</option></select>
+                    <select id="filterType"><option value="all">Все типы</option></select>
+                    <select id="filterCountry"><option value="all">Все страны</option></select>
+                    <button id="resetFilters" class="btn btn-ghost" style="padding:14px 32px;">✕ Сбросить</button>
                 </div>
-
                 <div class="catalog-groups">
-                    <!-- Медь -->
+                    <!-- Группы товаров (без изменений) -->
                     <div class="catalog-group" data-group="copper">
-                        <h3 class="group-title">🟠 Медь и медные изделия</h3>
+                        <h3 class="group-title reveal">🟠 Медь и медные изделия</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="М1" data-type="Лист" data-country="РФ" data-details="Лист медный М1, 0,4–25 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #b87333, #d4945c);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Лист медный</h4>
-                                    <p><strong>М1</strong> • 0,4–25 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="М1" data-type="Лист" data-country="РФ" data-images='["images/Copper_Plate_Sheet_1.png","images/Copper_Plate_Sheet_2.png","images/Copper_Plate_Sheet_3.png","images/Copper_Plate_Sheet_4.png","images/Copper_Plate_Sheet_5.png","images/Copper_Plate_Sheet_6.png"]'>
+                                <div class="card-image"><img src="images/Copper_Plate_Sheet_1.png" alt="Лист медный М1"></div>
+                                <div class="card-body"><h4>Лист медный</h4><p><strong>М1</strong> • 0,4–25 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="М1" data-type="Плита" data-country="РФ" data-details="Плиты медные М1, 30–60 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #a5632c, #c8844a);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Плиты медные</h4>
-                                    <p><strong>М1</strong> • 30–60 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="М1" data-type="Плита" data-country="РФ" data-images='["images/Copper_Plate_Sheet_2.png","images/Copper_Plate_Sheet_3.png","images/Copper_Plate_Sheet_4.png","images/Copper_Plate_Sheet_5.png","images/Copper_Plate_Sheet_6.png"]'>
+                                <div class="card-image"><img src="images/Copper_Plate_Sheet_2.png" alt="Плиты медные М1"></div>
+                                <div class="card-body"><h4>Плиты медные</h4><p><strong>М1</strong> • 30–60 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="М1,М2" data-type="Круг" data-country="РФ" data-details="Пруток медный М1,М2, Ø5–160 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #b87333, #d4945c);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Пруток медный</h4>
-                                    <p><strong>М1, М2</strong> • Ø5–160 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="М1,М2" data-type="Круг" data-country="РФ" data-images='["images/Copper_Bar_Rod_1.png","images/Copper_Bar_Rod_2.png","images/Copper_Bar_Rod_3.png","images/Copper_Bar_Rod_4.png","images/Copper_Bar_Rod_5.png","images/Copper_Bar_Rod_6.png"]'>
+                                <div class="card-image"><img src="images/Copper_Bar_Rod_1.png" alt="Пруток медный"></div>
+                                <div class="card-body"><h4>Пруток медный</h4><p><strong>М1, М2</strong> • Ø5–160 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Бронза -->
+
                     <div class="catalog-group" data-group="bronze">
-                        <h3 class="group-title">🟤 Бронза</h3>
+                        <h3 class="group-title reveal">🟤 Бронза</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="БрАЖ10-3,БрОЦ5-6-5" data-type="Чушка" data-country="РФ" data-details="Чушка бронзовая БрАЖ10-3,БрОЦ5-6-5, чушка, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #8b5a2b, #a57c51);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Чушка бронзовая</h4>
-                                    <p><strong>БрАЖ10-3, БрОЦ5-6-5</strong> • чушка</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="БрАЖ10-3,БрОЦ5-6-5" data-type="Чушка" data-country="РФ" data-images='["images/Alloy_Plate_Sheet_1.png","images/Alloy_Plate_Sheet_2.png","images/Alloy_Plate_Sheet_3.png","images/Alloy_Plate_Sheet_4.png","images/Alloy_Plate_Sheet_5.png"]'>
+                                <div class="card-image"><img src="images/Alloy_Plate_Sheet_1.png" alt="Чушка бронзовая"></div>
+                                <div class="card-body"><h4>Чушка бронзовая</h4><p><strong>БрАЖ10-3, БрОЦ5-6-5</strong> • чушка</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="БрАЖ9-4" data-type="Круг" data-country="РФ" data-details="Круг бронзовый БрАЖ9-4, Ø16–250 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #8b5a2b, #a57c51);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Круг бронзовый</h4>
-                                    <p><strong>БрАЖ9-4</strong> • Ø16–250 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="БрАЖ9-4" data-type="Круг" data-country="РФ" data-images='["images/Alloy_Plate_Sheet_2.png","images/Alloy_Plate_Sheet_3.png"]'>
+                                <div class="card-image"><img src="images/Alloy_Plate_Sheet_2.png" alt="Круг бронзовый"></div>
+                                <div class="card-body"><h4>Круг бронзовый</h4><p><strong>БрАЖ9-4</strong> • Ø16–250 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Латунь -->
+
                     <div class="catalog-group" data-group="brass">
-                        <h3 class="group-title">🟡 Латунь</h3>
+                        <h3 class="group-title reveal">🟡 Латунь</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Круг" data-country="РФ" data-details="Круг латунный ЛС59-1,Л63, Ø6–160 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #d4af37, #e6c84c);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Круг латунный</h4>
-                                    <p><strong>ЛС59-1, Л63</strong> • Ø6–160 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="ЛС59-1,Л63" data-type="Круг" data-country="РФ" data-images='["images/PPGI_PPGL_1.png","images/PPGI_PPGL_2.png","images/PPGI_PPGL_3.png","images/PPGI_PPGL_4.png","images/PPGI_PPGL_5.png","images/PPGI_PPGL_6.png"]'>
+                                <div class="card-image"><img src="images/PPGI_PPGL_1.png" alt="Круг латунный"></div>
+                                <div class="card-body"><h4>Круг латунный</h4><p><strong>ЛС59-1, Л63</strong> • Ø6–160 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Лист" data-country="РФ" data-details="Лист латунный ЛС59-1,Л63, 0,5–12 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #d4af37, #e6c84c);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Лист латунный</h4>
-                                    <p><strong>ЛС59-1, Л63</strong> • 0,5–12 мм</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="ЛС59-1,Л63" data-type="Лист" data-country="РФ" data-images='["images/Color_Aluminum_1.png","images/Color_Aluminum_2.png","images/Color_Aluminum_3.png","images/Color_Aluminum_4.png","images/Color_Aluminum_5.png","images/Color_Aluminum_6.png"]'>
+                                <div class="card-image"><img src="images/Color_Aluminum_1.png" alt="Лист латунный"></div>
+                                <div class="card-body"><h4>Лист латунный</h4><p><strong>ЛС59-1, Л63</strong> • 0,5–12 мм</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Нержавейка -->
+
                     <div class="catalog-group" data-group="stainless">
-                        <h3 class="group-title">⚪ Нержавеющая сталь</h3>
+                        <h3 class="group-title reveal">⚪ Нержавеющая сталь</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="AISI 304,321,316Ti" data-type="Труба" data-country="РФ,Китай,Индия" data-details="Трубы нержавеющие AISI 304,321,316Ti и др., Ø6 мм+, РФ/Китай/Индия">
-                                <div class="card-image" style="background: linear-gradient(135deg, #a0aab5, #c0cad5);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Трубы нержавеющие</h4>
-                                    <p><strong>AISI 304, 321 и др.</strong> • Ø6 мм+</p>
-                                    <span class="producer">РФ, Китай, Индия</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="AISI 304,321,316Ti" data-type="Труба" data-country="РФ,Китай,Индия" data-images='["images/Stainless_Steel_Pipe_Tube_1.png","images/Stainless_Steel_Pipe_Tube_2.png","images/Stainless_Steel_Pipe_Tube_3.png","images/Stainless_Steel_Pipe_Tube_4.png","images/Stainless_Steel_Pipe_Tube_5.png","images/Stainless_Steel_Pipe_Tube_6.png"]'>
+                                <div class="card-image"><img src="images/Stainless_Steel_Pipe_Tube_1.png" alt="Трубы нержавеющие"></div>
+                                <div class="card-body"><h4>Трубы нержавеющие</h4><p><strong>AISI 304, 321 и др.</strong> • Ø6 мм+</p><span class="producer">РФ, Китай, Индия</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="AISI 304,321,316Ti" data-type="Лист" data-country="РФ,Китай,Индия" data-details="Лист нержавеющий AISI 304,321,316Ti и др., от 0,5 мм, РФ/Китай/Индия">
-                                <div class="card-image" style="background: linear-gradient(135deg, #a0aab5, #c0cad5);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Лист нержавеющий</h4>
-                                    <p><strong>AISI 304, 321 и др.</strong> • от 0,5 мм</p>
-                                    <span class="producer">РФ, Китай, Индия</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="AISI 304,321,316Ti" data-type="Лист" data-country="РФ,Китай,Индия" data-images='["images/Stainless_Steel_Plate_Sheet_1.png","images/Stainless_Steel_Plate_Sheet_2.png","images/Stainless_Steel_Plate_Sheet_3.png","images/Stainless_Steel_Plate_Sheet_4.png","images/Stainless_Steel_Plate_Sheet_5.png","images/Stainless_Steel_Plate_Sheet_6.png"]'>
+                                <div class="card-image"><img src="images/Stainless_Steel_Plate_Sheet_1.png" alt="Лист нержавеющий"></div>
+                                <div class="card-body"><h4>Лист нержавеющий</h4><p><strong>AISI 304, 321 и др.</strong> • от 0,5 мм</p><span class="producer">РФ, Китай, Индия</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Титан, никель -->
+
                     <div class="catalog-group" data-group="titanium">
-                        <h3 class="group-title">⚫ Никель • Титан • Нихром</h3>
+                        <h3 class="group-title reveal">⚫ Никель • Титан • Нихром</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="ВТ1-0,ВТ5-1" data-type="Лист,Круг" data-country="РФ" data-details="Титан лист,круг,проволока ВТ1-0,ВТ5-1 и др., разные размеры, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #6b6b6b, #9e9e9e);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Титан (лист, круг)</h4>
-                                    <p><strong>ВТ1-0, ВТ5-1 и др.</strong></p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="ВТ1-0,ВТ5-1" data-type="Лист,Круг" data-country="РФ" data-images='["images/Nickel_Alloy_Bar_1.png","images/Nickel_Alloy_Bar_2.png","images/Nickel_Alloy_Bar_3.png","images/Nickel_Alloy_Bar_4.png","images/Nickel_Alloy_Bar_5.png","images/Nickel_Alloy_Bar_6.png"]'>
+                                <div class="card-image"><img src="images/Nickel_Alloy_Bar_1.png" alt="Титан"></div>
+                                <div class="card-body"><h4>Титан (лист, круг)</h4><p><strong>ВТ1-0, ВТ5-1 и др.</strong></p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="Н0,Н1" data-type="Катоды" data-country="РФ" data-details="Катоды никелевые Н0,Н1 и др., катоды/Ø4–10 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #4d4d4d, #737373);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Катоды никелевые</h4>
-                                    <p><strong>Н0, Н1 и др.</strong> • катоды</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="Н0,Н1" data-type="Катоды" data-country="РФ" data-images='["images/Nickel_Alloy_Pipe_Tube_1.png","images/Nickel_Alloy_Pipe_Tube_2.png","images/Nickel_Alloy_Pipe_Tube_3.png","images/Nickel_Alloy_Pipe_Tube_4.png","images/Nickel_Alloy_Pipe_Tube_5.png","images/Nickel_Alloy_Pipe_Tube_6.png"]'>
+                                <div class="card-image"><img src="images/Nickel_Alloy_Pipe_Tube_1.png" alt="Катоды никелевые"></div>
+                                <div class="card-body"><h4>Катоды никелевые</h4><p><strong>Н0, Н1 и др.</strong> • катоды</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Баббит, свинец -->
+
                     <div class="catalog-group" data-group="babbit">
-                        <h3 class="group-title">🔘 Баббит • Свинец • Олово</h3>
+                        <h3 class="group-title reveal">🔘 Баббит • Свинец • Олово</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="Б16,Б83" data-type="Чушка" data-country="РФ" data-details="Баббит Б16,Б83, чушка, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #6d6d6d, #919191);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Баббит</h4>
-                                    <p><strong>Б16, Б83</strong> • чушка</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="Б16,Б83" data-type="Чушка" data-country="РФ" data-images='["images/Galvanized_Wire_1.png","images/Galvanized_Wire_2.png","images/Galvanized_Wire_3.png","images/Galvanized_Wire_4.png"]'>
+                                <div class="card-image"><img src="images/Galvanized_Wire_1.png" alt="Баббит"></div>
+                                <div class="card-body"><h4>Баббит</h4><p><strong>Б16, Б83</strong> • чушка</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="С1,С2" data-type="Чушка" data-country="РФ" data-details="Чушка свинцовая С1,С2, чушка/1–15 мм, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #5b5b5b, #7a7a7a);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Чушка свинцовая</h4>
-                                    <p><strong>С1, С2</strong> • чушка</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="С1,С2" data-type="Чушка" data-country="РФ" data-images='["images/Galvanized_Steel_Plate_Sheet_1.png","images/Galvanized_Steel_Plate_Sheet_2.png"]'>
+                                <div class="card-image"><img src="images/Galvanized_Steel_Plate_Sheet_1.png" alt="Чушка свинцовая"></div>
+                                <div class="card-body"><h4>Чушка свинцовая</h4><p><strong>С1, С2</strong> • чушка</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Ферросплавы -->
+
                     <div class="catalog-group" data-group="ferro">
-                        <h3 class="group-title">⚙️ Ферросплавы и Чугун</h3>
+                        <h3 class="group-title reveal">⚙️ Ферросплавы и Чугун</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="ФМн78" data-type="–" data-country="РФ,Китай" data-details="Ферромарганец ФМн78 и др., —, РФ/Китай">
-                                <div class="card-image" style="background: linear-gradient(135deg, #3d3d3d, #5e5e5e);">
-                                    <span class="badge in-stock">В наличии</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Ферромарганец</h4>
-                                    <p><strong>ФМн78 и др.</strong></p>
-                                    <span class="producer">РФ, Китай</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="ФМн78" data-type="–" data-country="РФ,Китай" data-images='["images/Carbon_Steel_Wire_Wire_Rod_1.png","images/Carbon_Steel_Wire_Wire_Rod_2.png","images/Carbon_Steel_Wire_Wire_Rod_3.png","images/Carbon_Steel_Wire_Wire_Rod_4.png","images/Carbon_Steel_Wire_Wire_Rod_5.png","images/Carbon_Steel_Wire_Wire_Rod_6.png"]'>
+                                <div class="card-image"><img src="images/Carbon_Steel_Wire_Wire_Rod_1.png" alt="Ферромарганец"></div>
+                                <div class="card-body"><h4>Ферромарганец</h4><p><strong>ФМн78 и др.</strong></p><span class="producer">РФ, Китай</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="Л2,Л3" data-type="Чушка" data-country="РФ" data-details="Чугун литейный Л2,Л3 и др., чушка, РФ">
-                                <div class="card-image" style="background: linear-gradient(135deg, #3d3d3d, #5e5e5e);">
-                                    <span class="badge on-order">Под заказ</span> 📄
-                                </div>
-                                <div class="card-body">
-                                    <h4>Чугун литейный</h4>
-                                    <p><strong>Л2, Л3 и др.</strong> • чушка</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="Л2,Л3" data-type="Чушка" data-country="РФ" data-images='["images/Carbon_Steel_Plate_Sheet_1.png","images/Carbon_Steel_Plate_Sheet_2.png","images/Carbon_Steel_Plate_Sheet_3.png","images/Carbon_Steel_Plate_Sheet_4.png","images/Carbon_Steel_Plate_Sheet_5.png","images/Carbon_Steel_Plate_Sheet_6.png"]'>
+                                <div class="card-image"><img src="images/Carbon_Steel_Plate_Sheet_1.png" alt="Чугун литейный"></div>
+                                <div class="card-body"><h4>Чугун литейный</h4><p><strong>Л2, Л3 и др.</strong> • чушка</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Литьё (НОВЫЙ РАЗДЕЛ) -->
+
                     <div class="catalog-group" data-group="casting">
-                        <h3 class="group-title">🏺 Литьё по чертежам заказчика</h3>
+                        <h3 class="group-title reveal">🏺 Литьё по чертежам заказчика</h3>
                         <div class="items-grid">
-                            <div class="product-card" data-mark="БрАЖ,БрОЦ" data-type="Литьё" data-country="РФ" data-details="Литьё бронзовое: БрАЖ9-4, БрОЦ5-6-5, любые марки. По чертежам заказчика. Вес отливок до 500 кг.">
-                                <div class="card-image" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                                    <span class="badge on-order">Под заказ</span> 🛠️
-                                </div>
-                                <div class="card-body">
-                                    <h4>Литьё бронзовое</h4>
-                                    <p><strong>БрАЖ9-4, БрОЦ5-6-5</strong> • по чертежам</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="БрАЖ,БрОЦ" data-type="Литьё" data-country="РФ" data-images='["images/Alloy_Plate_Sheet_1.png","images/Alloy_Plate_Sheet_2.png","images/Alloy_Plate_Sheet_3.png","images/Alloy_Plate_Sheet_4.png","images/Alloy_Plate_Sheet_5.png"]'>
+                                <div class="card-image"><img src="images/Alloy_Plate_Sheet_1.png" alt="Литьё бронзовое"></div>
+                                <div class="card-body"><h4>Литьё бронзовое</h4><p><strong>БрАЖ9-4, БрОЦ5-6-5</strong> • до 2 т</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="ЛС59-1,Л63" data-type="Литьё" data-country="РФ" data-details="Литьё латунное: ЛС59-1, Л63. Изготовление корпусов, втулок, шестерён. По вашим чертежам.">
-                                <div class="card-image" style="background: linear-gradient(135deg, #DAA520, #F0E68C);">
-                                    <span class="badge on-order">Под заказ</span> 🛠️
-                                </div>
-                                <div class="card-body">
-                                    <h4>Литьё латунное</h4>
-                                    <p><strong>ЛС59-1, Л63</strong> • по чертежам</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="ЛС59-1,Л63" data-type="Литьё" data-country="РФ" data-images='["images/PPGI_PPGL_1.png","images/PPGI_PPGL_2.png","images/PPGI_PPGL_3.png","images/PPGI_PPGL_4.png","images/PPGI_PPGL_5.png","images/PPGI_PPGL_6.png"]'>
+                                <div class="card-image"><img src="images/PPGI_PPGL_1.png" alt="Литьё латунное"></div>
+                                <div class="card-body"><h4>Литьё латунное</h4><p><strong>ЛС59-1, Л63</strong> • до 2 т</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
-                            <div class="product-card" data-mark="СЧ20,ВЧ50" data-type="Литьё" data-country="РФ" data-details="Литьё чугунное: серый чугун СЧ20, высокопрочный ВЧ50. Станины, корпуса, шкивы. Вес до 2 тонн.">
-                                <div class="card-image" style="background: linear-gradient(135deg, #4a4a4a, #6d6d6d);">
-                                    <span class="badge on-order">Под заказ</span> 🛠️
-                                </div>
-                                <div class="card-body">
-                                    <h4>Литьё чугунное</h4>
-                                    <p><strong>СЧ20, ВЧ50</strong> • по чертежам</p>
-                                    <span class="producer">РФ</span>
-                                    <button class="btn-inquire">Уточнить цену</button>
-                                </div>
+                            <div class="product-card reveal" data-mark="СЧ20,ВЧ50" data-type="Литьё" data-country="РФ" data-images='["images/Carbon_Steel_Plate_Sheet_1.png","images/Carbon_Steel_Plate_Sheet_2.png","images/Carbon_Steel_Plate_Sheet_3.png","images/Carbon_Steel_Plate_Sheet_4.png","images/Carbon_Steel_Plate_Sheet_5.png","images/Carbon_Steel_Plate_Sheet_6.png"]'>
+                                <div class="card-image"><img src="images/Carbon_Steel_Plate_Sheet_1.png" alt="Литьё чугунное"></div>
+                                <div class="card-body"><h4>Литьё чугунное</h4><p><strong>СЧ20, ВЧ50</strong> • до 2 т</p><span class="producer">РФ</span><button class="btn-gallery">📷 Все фото</button><button class="btn-inquire">Уточнить цену</button></div>
                             </div>
                         </div>
                     </div>
@@ -812,65 +1385,68 @@
 
         <section id="testimonials" class="testimonials">
             <div class="container">
-                <h2 class="section-title">Нам доверяют</h2>
+                <h2 class="section-title reveal">Нам доверяют</h2>
                 <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p>«Сотрудничаем с KAS INVEST более 5 лет. Поставляют бронзу БрАЖ9-4 для нашего литейного цеха. Всегда точно в срок, полный пакет документов.»</p>
-                        <div class="testimonial-author">АО «КазАрматура», г. Алматы</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>«Нужна была редкая нержавейка AISI 316Ti, ребята нашли за 2 дня. Отгрузили с резкой под наши размеры. Сервис на высоте.»</p>
-                        <div class="testimonial-author">ТОО «СтальПромСервис», г. Нур-Султан</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>«Цены на медь М1 всегда ниже рыночных. Приятно работать: можно заказать от 1 листа, быстрая доставка в Россию.»</p>
-                        <div class="testimonial-author">ООО «ПромМетРесурс», г. Челябинск</div>
-                    </div>
+                    <div class="testimonial-card reveal reveal-delay-1"><p>«Сотрудничаем с KAS INVEST более 5 лет. Поставляют бронзу БрАЖ9-4 для нашего литейного цеха. Всегда точно в срок, полный пакет документов.»</p><div class="testimonial-author">АО «КазАрматура», г. Алматы</div></div>
+                    <div class="testimonial-card reveal reveal-delay-2"><p>«Нужна была редкая нержавейка AISI 316Ti, ребята нашли за 2 дня. Отгрузили с резкой под наши размеры. Сервис на высоте.»</p><div class="testimonial-author">ТОО «СтальПромСервис», г. Нур-Султан</div></div>
+                    <div class="testimonial-card reveal reveal-delay-3"><p>«Цены на медь М1 всегда ниже рыночных. Приятно работать: можно заказать от 1 листа, быстрая доставка в Россию.»</p><div class="testimonial-author">ООО «ПромМетРесурс», г. Челябинск</div></div>
                 </div>
             </div>
         </section>
 
         <section id="faq" class="faq">
             <div class="container">
-                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <h2 class="section-title reveal">Часто задаваемые вопросы</h2>
                 <div class="faq-grid">
-                    <div class="faq-item">
-                        <button class="faq-question">Какой минимальный объём заказа? <span>+</span></button>
-                        <div class="faq-answer">Мы отгружаем от одной единицы (лист, пруток, чушка). Для ферросплавов минимальная партия обговаривается отдельно.</div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Работаете ли с ИП и физическими лицами? <span>+</span></button>
-                        <div class="faq-answer">Да, мы оформляем заказы как на юридических лиц, так и на ИП. Для физлиц возможна продажа по договору.</div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Какие сроки поставки? <span>+</span></button>
-                        <div class="faq-answer">Позиции со склада – отгрузка на следующий день. Под заказ – от 2 до 10 рабочих дней в зависимости от объёма и страны производства.</div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Предоставляете ли сертификаты качества? <span>+</span></button>
-                        <div class="faq-answer">Обязательно. С каждой партией вы получаете сертификат соответствия и паспорт качества от завода-изготовителя.</div>
-                    </div>
+                    <div class="faq-item reveal"><button class="faq-question">Какой минимальный объём заказа? <span>+</span></button><div class="faq-answer">Мы отгружаем от одной единицы (лист, пруток, чушка). Для ферросплавов минимальная партия обговаривается отдельно.</div></div>
+                    <div class="faq-item reveal"><button class="faq-question">Работаете ли с ИП и физическими лицами? <span>+</span></button><div class="faq-answer">Да, мы оформляем заказы как на юридических лиц, так и на ИП. Для физлиц возможна продажа по договору.</div></div>
+                    <div class="faq-item reveal"><button class="faq-question">Какие сроки поставки? <span>+</span></button><div class="faq-answer">Позиции со склада – отгрузка на следующий день. Под заказ – от 2 до 10 рабочих дней в зависимости от объёма и страны производства.</div></div>
+                    <div class="faq-item reveal"><button class="faq-question">Предоставляете ли сертификаты качества? <span>+</span></button><div class="faq-answer">Обязательно. С каждой партией вы получаете сертификат соответствия и паспорт качества от завода-изготовителя.</div></div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Связаться с директором</h2>
+                <h2 class="section-title reveal">Связаться с директором</h2>
                 <div class="contact-grid">
-                    <div>
+                    <div class="contact-info reveal">
                         <p><strong>Громоздин К.А.</strong></p>
                         <p><strong>Телефон:</strong> +7 (778) 153-48-48</p>
                         <p><strong>Email:</strong> too_kasinvestgroup@mail.ru</p>
                         <p><strong>WhatsApp/Telegram:</strong> +7 778 153 48 48</p>
-                    </div>
-                    <div>
-                        <p><strong>Адрес:</strong><br>Республика Казахстан, Карагандинская область,<br>г. Темиртау, ул. Карагандинская, строение 45</p>
+                        <p><strong>Адрес:</strong> Республика Казахстан, Карагандинская обл., г. Темиртау, ул. Карагандинская, 45</p>
                         <p><strong>Время работы:</strong> Пн–Пт, 09:00–18:00</p>
                     </div>
+                    <div class="contact-form-container reveal reveal-delay-1">
+                        <h3>Быстрый запрос</h3>
+                        <form id="contactForm" class="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST">
+                            <input type="text" name="name" placeholder="Ваше имя или компания" required>
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                            <input type="email" name="_replyto" placeholder="Email">
+                            <textarea name="message" rows="3" placeholder="Уточните детали: марка, размер, количество..."></textarea>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Отправить</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="map-container">
+                <div class="map-container reveal">
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=72.9732%2C50.0483&z=15&pt=72.9732,50.0483,pm2rdm&size=800,400&lang=ru_RU" loading="lazy" allowfullscreen></iframe>
+                </div>
+                <div class="direct-contact reveal">
+                    <div class="direct-contact__inner">
+                        <h3>Или свяжитесь напрямую</h3>
+                        <div class="direct-contact__buttons">
+                            <a href="tel:+77781534848" class="btn btn-gold-filled">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                                Позвонить
+                            </a>
+                            <a href="mailto:too_kasinvestgroup@mail.ru" class="btn btn-gold-filled">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                Написать
+                            </a>
+                        </div>
+                        <p class="direct-contact__hint">Мы отвечаем в течение 15 минут в рабочее время</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -878,106 +1454,248 @@
 
     <div id="inquire-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modal-title">Запрос цены и наличия</h3>
-            <p id="modal-details"></p>
-            <form id="inquiry-form" class="inquiry-form">
+            <button class="close" id="closeInquire">&times;</button>
+            <h3 style="font-size:2rem; font-weight:500; margin-bottom:8px;">Запрос цены</h3>
+            <p style="color:#7A7265; margin-bottom:24px;">Уточните детали, и мы подготовим лучшее предложение</p>
+            <div id="modal-details"></div>
+            <form id="inquiryForm" class="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST">
                 <input type="text" name="name" placeholder="Ваше имя или компания" required>
-                <input type="tel" name="phone" placeholder="Телефон для связи" required>
-                <input type="email" name="email" placeholder="Email (необязательно)">
-                <textarea name="message" rows="3" placeholder="Уточните детали: размер, количество, марка..."></textarea>
-                <button type="submit" class="btn btn-primary">Отправить запрос</button>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="email" name="_replyto" placeholder="Email">
+                <textarea name="message" rows="3" placeholder="Дополнительные требования..."></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Отправить запрос</button>
             </form>
-            <div class="contact-quick">
-                <p>Или свяжитесь напрямую:</p>
-                <a href="tel:+77781534848" class="btn btn-ghost">Позвонить сейчас</a>
-                <a href="mailto:too_kasinvestgroup@mail.ru" id="modal-email" class="btn btn-ghost">Написать email</a>
+            <div style="text-align:center; margin-top:20px; font-size:0.95rem; color:#5A5548;">
+                Или звоните: <a href="tel:+77781534848" style="color:#B08A4B; font-weight:600;">+7 (778) 153-48-48</a>
             </div>
         </div>
     </div>
 
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-container">
+            <button class="gallery-close">&times;</button>
+            <div class="gallery-main"><img id="gallery-main-img" src="" alt=""></div>
+            <div class="gallery-thumbs" id="gallery-thumbs"></div>
+            <div class="gallery-nav"><button id="prevImg">◀ Назад</button><button id="nextImg">Вперед ▶</button></div>
+        </div>
+    </div>
+
     <footer>
-        <div class="footer-content">
+        <div class="container footer-content">
             <div>© 2026 ТОО «KAS INVEST GROUP» • Все права защищены</div>
             <div>БИН 260240024284 • ИИК KZ66856220315152948678 KZT</div>
-            <div>Металл, который работает • <a href="#contact">Связаться с директором</a></div>
+            <div><a href="#contact">Контакты</a></div>
         </div>
     </footer>
 
     <script>
         (function() {
-            const modal = document.getElementById('inquire-modal');
-            const modalDetails = document.getElementById('modal-details');
-            const modalEmail = document.getElementById('modal-email');
-            const closeBtn = document.querySelector('.close');
-            const inquiryForm = document.getElementById('inquiry-form');
+            // Mobile burger
+            const burger = document.getElementById('burger');
+            const nav = document.getElementById('nav');
+            if (burger && nav) {
+                burger.addEventListener('click', () => nav.classList.toggle('active'));
+            }
 
-            document.querySelectorAll('.btn-inquire').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const card = e.target.closest('.product-card');
-                    const details = card.dataset.details || '';
-                    modalDetails.textContent = details;
-                    modalEmail.href = `mailto:too_kasinvestgroup@mail.ru?subject=Запрос по каталогу: ${encodeURIComponent(details)}`;
-                    modal.style.display = 'block';
-                    document.querySelector('#inquiry-form textarea').value = details;
+            // Gallery modal logic
+            let currentImages = [];
+            let currentIndex = 0;
+            const galleryModal = document.getElementById('gallery-modal');
+            const mainImg = document.getElementById('gallery-main-img');
+            const thumbs = document.getElementById('gallery-thumbs');
+
+            function openGallery(imagesArray, startIdx = 0) {
+                if (!imagesArray || imagesArray.length === 0) return;
+                currentImages = imagesArray;
+                currentIndex = startIdx;
+                updateGallery();
+                galleryModal.classList.add('active');
+                document.addEventListener('keydown', onKeyDown);
+            }
+
+            function closeGallery() {
+                galleryModal.classList.remove('active');
+                document.removeEventListener('keydown', onKeyDown);
+            }
+
+            function updateGallery() {
+                if (!mainImg || !thumbs) return;
+                mainImg.src = currentImages[currentIndex] || '';
+                thumbs.innerHTML = '';
+                currentImages.forEach((src, i) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.classList.toggle('active-thumb', i === currentIndex);
+                    img.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateGallery();
+                    });
+                    thumbs.appendChild(img);
+                });
+            }
+
+            function prevImage() {
+                if (currentImages.length) {
+                    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+                    updateGallery();
+                }
+            }
+
+            function nextImage() {
+                if (currentImages.length) {
+                    currentIndex = (currentIndex + 1) % currentImages.length;
+                    updateGallery();
+                }
+            }
+
+            function onKeyDown(e) {
+                if (e.key === 'Escape') closeGallery();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'ArrowRight') nextImage();
+            }
+
+            document.querySelector('.gallery-close')?.addEventListener('click', closeGallery);
+            document.getElementById('prevImg')?.addEventListener('click', prevImage);
+            document.getElementById('nextImg')?.addEventListener('click', nextImage);
+            galleryModal?.addEventListener('click', (e) => {
+                if (e.target === galleryModal) closeGallery();
+            });
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                const btn = card.querySelector('.btn-gallery');
+                const imagesAttr = card.getAttribute('data-images');
+                if (btn && imagesAttr) {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        try {
+                            const imgs = JSON.parse(imagesAttr);
+                            openGallery(imgs, 0);
+                        } catch (e) { /* ignore */ }
+                    });
+                }
+                card.addEventListener('dblclick', (e) => {
+                    if (e.target.classList.contains('btn-inquire') || e.target.classList.contains('btn-gallery')) return;
+                    try {
+                        const imgs = JSON.parse(imagesAttr);
+                        if (imgs) openGallery(imgs, 0);
+                    } catch (e) { /* ignore */ }
                 });
             });
 
-            closeBtn.addEventListener('click', () => modal.style.display = 'none');
-            window.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+            // Inquiry modal
+            const inquireModal = document.getElementById('inquire-modal');
+            const modalDetails = document.getElementById('modal-details');
+            const closeInquire = document.getElementById('closeInquire');
 
-            inquiryForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Спасибо! Ваш запрос получен. Мы свяжемся с вами в ближайшее время.');
-                modal.style.display = 'none';
-                this.reset();
+            function openInquireModal(productName) {
+                if (modalDetails) {
+                    modalDetails.textContent = productName || 'Уточните детали заказа';
+                }
+                if (inquireModal) {
+                    inquireModal.style.display = 'flex';
+                    inquireModal.offsetHeight;
+                    inquireModal.classList.add('active');
+                }
+            }
+
+            document.querySelectorAll('.btn-inquire').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const card = e.target.closest('.product-card');
+                    const productName = card?.querySelector('h4')?.innerText || '';
+                    const productDesc = card?.querySelector('p')?.innerText || '';
+                    const details = productName + ' — ' + productDesc;
+                    const ta = document.querySelector('#inquiryForm textarea');
+                    if (ta) ta.value = details;
+                    openInquireModal(details);
+                });
             });
 
-            const searchInput = document.getElementById('searchInput');
+            if (closeInquire) {
+                closeInquire.addEventListener('click', () => {
+                    if (inquireModal) {
+                        inquireModal.classList.remove('active');
+                        setTimeout(() => { inquireModal.style.display = 'none'; }, 300);
+                    }
+                });
+            }
+
+            window.addEventListener('click', (e) => {
+                if (e.target === inquireModal) {
+                    inquireModal.classList.remove('active');
+                    setTimeout(() => { inquireModal.style.display = 'none'; }, 300);
+                }
+            });
+
+            // Forms (prevent default for demo)
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    if (this.action.includes('formspree.io/f/your-form-id')) {
+                        e.preventDefault();
+                        alert('Спасибо! Ваш запрос получен. Мы свяжемся с вами в ближайшее время.');
+                        this.reset();
+                        if (this.closest('#inquire-modal')) {
+                            inquireModal.classList.remove('active');
+                            setTimeout(() => { inquireModal.style.display = 'none'; }, 300);
+                        }
+                    }
+                });
+            });
+
+            // Filters
+            const filterMark = document.getElementById('filterMark');
             const filterType = document.getElementById('filterType');
             const filterCountry = document.getElementById('filterCountry');
+            const resetBtn = document.getElementById('resetFilters');
             const productCards = document.querySelectorAll('.product-card');
             const groups = document.querySelectorAll('.catalog-group');
 
             function populateFilters() {
-                const types = new Set();
-                const countries = new Set();
+                const types = new Set(),
+                    countries = new Set(),
+                    marks = new Set();
                 productCards.forEach(card => {
-                    const t = card.dataset.type;
-                    if (t) t.split(',').forEach(v => types.add(v.trim()));
-                    const c = card.dataset.country;
-                    if (c) c.split(',').forEach(v => countries.add(v.trim()));
+                    if (card.dataset.type) card.dataset.type.split(',').forEach(v => types.add(v.trim()));
+                    if (card.dataset.country) card.dataset.country.split(',').forEach(v => countries.add(v.trim()));
+                    if (card.dataset.mark) card.dataset.mark.split(',').forEach(v => marks.add(v.trim()));
+                });
+                marks.forEach(m => {
+                    const opt = document.createElement('option');
+                    opt.value = m;
+                    opt.textContent = m;
+                    filterMark.appendChild(opt);
                 });
                 types.forEach(t => {
                     const opt = document.createElement('option');
-                    opt.value = t; opt.textContent = t;
+                    opt.value = t;
+                    opt.textContent = t;
                     filterType.appendChild(opt);
                 });
                 countries.forEach(c => {
                     const opt = document.createElement('option');
-                    opt.value = c; opt.textContent = c;
+                    opt.value = c;
+                    opt.textContent = c;
                     filterCountry.appendChild(opt);
                 });
             }
             populateFilters();
 
             function filterCatalog() {
-                const query = searchInput.value.toLowerCase().trim();
-                const selectedType = filterType.value;
-                const selectedCountry = filterCountry.value;
+                const markVal = filterMark.value;
+                const typeVal = filterType.value;
+                const countryVal = filterCountry.value;
 
                 productCards.forEach(card => {
-                    const mark = (card.dataset.mark || '').toLowerCase();
+                    const mark = card.dataset.mark || '';
                     const type = card.dataset.type || '';
                     const country = card.dataset.country || '';
-                    const details = (card.dataset.details || '').toLowerCase();
-                    const searchText = mark + ' ' + type.toLowerCase() + ' ' + details;
 
-                    const matchesSearch = !query || searchText.includes(query);
-                    const matchesType = selectedType === 'all' || type.split(',').map(s => s.trim()).includes(selectedType);
-                    const matchesCountry = selectedCountry === 'all' || country.split(',').map(s => s.trim()).includes(selectedCountry);
+                    const matchesMark = markVal === 'all' || mark.split(',').map(s => s.trim()).includes(markVal);
+                    const matchesType = typeVal === 'all' || type.split(',').map(s => s.trim()).includes(typeVal);
+                    const matchesCountry = countryVal === 'all' || country.split(',').map(s => s.trim()).includes(countryVal);
 
-                    card.style.display = (matchesSearch && matchesType && matchesCountry) ? '' : 'none';
+                    card.style.display = (matchesMark && matchesType && matchesCountry) ? '' : 'none';
                 });
 
                 groups.forEach(group => {
@@ -986,10 +1704,17 @@
                 });
             }
 
-            searchInput.addEventListener('input', filterCatalog);
-            filterType.addEventListener('change', filterCatalog);
-            filterCountry.addEventListener('change', filterCatalog);
+            filterMark?.addEventListener('change', filterCatalog);
+            filterType?.addEventListener('change', filterCatalog);
+            filterCountry?.addEventListener('change', filterCatalog);
+            resetBtn?.addEventListener('click', () => {
+                if (filterMark) filterMark.value = 'all';
+                if (filterType) filterType.value = 'all';
+                if (filterCountry) filterCountry.value = 'all';
+                filterCatalog();
+            });
 
+            // FAQ accordion
             document.querySelectorAll('.faq-question').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const item = btn.parentElement;
@@ -999,21 +1724,19 @@
                 });
             });
 
+            // Scroll reveal
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('visible');
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-            document.querySelectorAll('.product-card, .feature-item, .step-card, .testimonial-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            document.querySelectorAll('.reveal').forEach(el => {
                 observer.observe(el);
             });
+
         })();
     </script>
 </body>
